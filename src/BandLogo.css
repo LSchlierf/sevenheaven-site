@@ -1,0 +1,14 @@
+.BandLogoWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    white-space: nowrap;
+}
+
+.BandLogoV {
+    transform: scaleY(-1) translateY(3%) translateX(12%);
+}
+
+.BandLogoNormal, .BandLogoV {
+    color: white;
+}

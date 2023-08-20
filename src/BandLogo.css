@@ -1,14 +1,14 @@
 .BandLogoWrapper {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    padding: 20px;
     white-space: nowrap;
 }
 
 .BandLogoV {
-    transform: scaleY(-1) translateY(2%) translateX(5%);
+    transform: scaleY(-1) translateY(2%) translateX(2%);
 }
 
-.BandLogoNormal, .BandLogoV {
-    color: white;
+.BandLogoV .BandLogoNormal {
+  font-family: "Nexa Rust Sans W00 Black 02" !important;
 }

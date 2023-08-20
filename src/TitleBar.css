@@ -1,0 +1,11 @@
+.imgContainer {
+    justify-content: center;
+    display: flex;
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    padding-bottom: 5vw;
+}
+
+.mobileBar {
+    position: fixed;
+    width: 100vw;
+}

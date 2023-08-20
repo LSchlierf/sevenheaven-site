@@ -7,11 +7,11 @@ function MainPage() {
     <>
     { (isBrowser || isTablet) ?
       <div>
-        <BandLogo/>
+        <BandLogo text='Hallo desktop' fontsize='10vw'/>
       </div>
       :
       <div>
-        <BandLogo/>
+        <BandLogo text='Hallo mobile'/>
       </div>
     }
     </>

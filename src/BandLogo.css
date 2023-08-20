@@ -6,7 +6,7 @@
 }
 
 .BandLogoV {
-    transform: scaleY(-1) translateY(3%) translateX(12%);
+    transform: scaleY(-1) translateY(2%) translateX(5%);
 }
 
 .BandLogoNormal, .BandLogoV {

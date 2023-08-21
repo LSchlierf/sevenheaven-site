@@ -1,0 +1,45 @@
+.imgCyclerM {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+.imgCyclerM > img {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    z-index: inherit;
+}
+
+.landingContent {
+    width: 100vw;
+    height:100vh
+}
+
+.goLeft {
+    left: 5vw;
+}
+
+.goRight {
+    right: 5vw;
+}
+
+.goLeft, .goRight {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 12px;
+    padding-bottom: 6px;
+    position: absolute;
+    top: 50vh;
+}
+
+.imgCyclerM > img {
+    object-fit: cover
+}
+

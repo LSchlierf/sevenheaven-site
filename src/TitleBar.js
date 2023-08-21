@@ -4,6 +4,7 @@ import './TitleBar.css'
 import BandLogo from './BandLogo';
 
 function desktopBar() {
+  return mobileBar()
   return (
     <>
     </>

@@ -1,8 +1,8 @@
 import './BandLogo.css'
 
-function renderText(inputText, fontsize, color) {
+function renderText(inputText, fontSize, color) {
   const styleElement = {
-    fontSize: fontsize,
+    fontSize: fontSize,
     color: color
   }
   let output = []
@@ -35,7 +35,7 @@ function renderText(inputText, fontsize, color) {
 
 function BandLogo(props) {
   const inputText = props.text?.toUpperCase() || "SEVEN HEAVEN"
-  const fontsize = props.fontsize || "11vw"
+  const fontSize = props.fontSize || "11vw"
   const color = props.color || 'white'
   const backgroundColor = props.backgroundColor || 'black'
   const wrapperStyleElement = {
@@ -44,7 +44,7 @@ function BandLogo(props) {
 
   return (
     <div className='BandLogoWrapper' style={wrapperStyleElement}>
-      {renderText(inputText, fontsize, color)}
+      {renderText(inputText, fontSize, color)}
     </div>
   )
 }

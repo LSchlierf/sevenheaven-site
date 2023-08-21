@@ -3,10 +3,15 @@
     display: flex;
     background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
     padding-bottom: 5vw;
+    height: calc(25vw - (var(--scrolled) * 10vw));
 }
 
 .mobileBar {
     position: fixed;
     width: 100vw;
     z-index: 2;
+}
+
+.imgContainer > img {
+    height: calc(25vw - (var(--scrolled) * 15vw));
 }

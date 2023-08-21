@@ -10,10 +10,10 @@
 }
 
 .imgCyclerM > img {
+    filter: blur(calc(var(--scrolled) * 10px));
     flex-shrink: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: fill;
     z-index: inherit;
 }
 
@@ -43,3 +43,27 @@
     object-fit: cover
 }
 
+.scrollContent {
+    position: absolute;
+    top: 100vh;
+    width: 100vw;
+    background: none;
+}
+
+.textBoxWrapper {
+    padding-bottom: 10vw;
+    display: grid;
+    justify-content: center;
+}
+
+.textBox {
+    width: calc(80vw - 30px);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+a {
+    color: white
+}

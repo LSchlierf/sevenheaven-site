@@ -16,7 +16,7 @@ function mobileBar() {
     <div className='mobileBar'>
       <BandLogo fontsize='8vw' />
       <div className='imgContainer'>
-        <img src='Logo.png' alt='Bandlogo' width='100vw'/>
+        <img src='Logo.png' alt='Bandlogo'/>
       </div>
     </div>
   )

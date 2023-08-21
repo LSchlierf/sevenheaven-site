@@ -1,6 +1,7 @@
 html {
   color: white;
   background-color: black;
+  --scrolled: 0
 }
 
 body {

@@ -1,0 +1,26 @@
+.imageCardWrapper {
+    padding-bottom: 10vw;
+    display: grid;
+    justify-content: center;
+}
+
+.imageCard {
+    display: flex;
+    width: 80vw;
+    height: 45vw;
+    overflow: hidden;
+}
+
+.imageCard > img {
+    object-fit: cover;
+}
+
+.caption {
+    width: 80vw;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.textContainer {
+    padding: 10px;
+}

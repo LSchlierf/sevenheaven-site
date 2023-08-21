@@ -1,0 +1,28 @@
+.headerWrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: max-content;
+    padding-bottom: 10vw;
+}
+
+.gradientL, .gradientR {
+    height: 1vw;
+    width: 20%;
+    display: inline-block;
+}
+
+.gradientL {
+    margin-right: 5%;
+    background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.gradientR {
+    margin-left: 5%;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.titleWrapper {
+    width: 40%;
+    display: inline-block;
+}

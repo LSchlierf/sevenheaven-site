@@ -97,5 +97,7 @@ a {
     border-radius: 5vw;
 }
 
-.animate-to-left{position:relative;left:100%;animation:animatetoleft 0.4s}@keyframes animatetoleft{from{left:-100%;} to{left:0%;}}
-.animate-to-right{position:relative;right:100%;animation:animatetoright 0.4s}@keyframes animatetoright{from{right:-100%;} to{right:0%;}}
+@media (prefers-reduced-motion: no-preference) {
+    .animate-to-left{position:relative;left:100%;animation:animatetoleft 0.4s}@keyframes animatetoleft{from{left:-100%;} to{left:0%;}}
+    .animate-to-right{position:relative;right:100%;animation:animatetoright 0.4s}@keyframes animatetoright{from{right:-100%;} to{right:0%;}}
+}

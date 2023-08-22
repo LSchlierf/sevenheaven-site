@@ -8,8 +8,9 @@ import { TiMail } from "react-icons/ti"
 import { IconContext } from 'react-icons/lib';
 import Header from './Header';
 import ImageCard from './ImageCard';
+import PageFooter from './PageFooter';
 
-let imagesM = ['bg/0.jpg', 'bg/1.JPG', 'bg/2.jpeg']
+let imagesM = ['bg/2.jpeg', 'bg/0.jpg', 'bg/1.JPG']
 
 function desktopPage(img, setImg) {
   return mobilePage(img, setImg)
@@ -21,19 +22,53 @@ function desktopPage(img, setImg) {
 }
 
 function mobilePage(img, setImg) {
+  function getImages() {
+    return img.map((src, index) => <img className='bg' id={'bg' + index} src={src} alt='background' key={index}/>)
+  }
+
+  function slideLeft() {
+    const list = document.getElementsByClassName('bg')
+    for(let item of list) {
+      item.classList.add('animate-to-left')
+    }
+    const imagesMNew = [img[img.length - 1], ...img.slice(0, img.length - 1)]
+    setImg(imagesMNew)
+
+    setTimeout(() => {
+      for(let item of list) {
+        item.classList.remove('animate-to-left')
+      }
+    }, 400)
+  }
+
+  function slideRight() {
+    const list = document.getElementsByClassName('bg')
+    for(let item of list) {
+      item.classList.add('animate-to-right')
+    }
+    const imagesMNew = [...img.slice(1, img.length), img[0]]
+    setImg(imagesMNew)
+
+    setTimeout(() => {
+      for(let item of list) {
+        item.classList.remove('animate-to-right')
+      }
+    }, 400)
+  }
+
   return (
     <>
       <TitleBar />
       <div className='imgCyclerM'>
-        <img src={imagesM[img]} alt='bg' />
+        {getImages()}
       </div>
       <div className='landingContent'>
         <IconContext.Provider value={{ color: 'white', size: 30 }}>
           <div className='goLeft'>
-            <FaChevronLeft onClick={() => setImg((img - 1 + imagesM.length) % imagesM.length)} />
+            <FaChevronLeft onClick={slideLeft} />
           </div>
           <div className='goRight'>
-            <FaChevronRight onClick={() => setImg((img + 1) % imagesM.length)} />
+            <FaChevronRight onClick={slideRight} />
           </div>
         </IconContext.Provider>
       </div>
@@ -72,33 +107,35 @@ function mobilePage(img, setImg) {
         <div className='socials'>
           <span className='socialContainer'>
             <div className='iconContainer'>
-              <div className='icon'>
+              <a className='icon' href='https://instagram.com/sevenheaven.band' target='_blank' rel='noopener noreferrer'>
                 <IconContext.Provider value={{ color: 'white', size: '12vw' }} >
                   <BsInstagram />
                 </IconContext.Provider>
-              </div>
+              </a>
             </div>
-            @sevenheaven.band
+            <a href='https://instagram.com/sevenheaven.band' target='_blank' rel='noopener noreferrer'>
+              @sevenheaven.band
+            </a>
           </span>
           <span className='socialContainer'>
             <div className='iconContainer'>
-              <div className='icon'>
-                <IconContext.Provider value={{ color: 'white', size: '15vw' }} >
+              <a className='icon' href='mailto:sevenheaven.partyband@gmail.com'>
+                <IconContext.Provider value={{ color: 'white', size: '15vw', style: { 'paddingBottom': '2vw' } }} >
                   <TiMail />
                 </IconContext.Provider>
-              </div>
+              </a>
             </div>
             <a href='mailto:sevenheaven.partyband@gmail.com'>sevenheaven.partyband@gmail.com</a>
           </span>
         </div>
-        {/* TODO: impressum datenschutz footer */}
+        <PageFooter />
       </div>
     </>
   )
 }
 
 function MainPage() {
-  const [img, setImg] = useState(0)
+  const [img, setImg] = useState(imagesM)
   return (
     <>
       {(isBrowser || isTablet) ?

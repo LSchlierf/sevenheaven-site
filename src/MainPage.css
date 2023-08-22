@@ -15,6 +15,7 @@
     width: 100vw;
     height: 100vh;
     z-index: inherit;
+    object-fit: cover;
 }
 
 .landingContent {
@@ -37,10 +38,6 @@
     padding-bottom: 6px;
     position: absolute;
     top: 50vh;
-}
-
-.imgCyclerM > img {
-    object-fit: cover
 }
 
 .scrollContent {
@@ -99,3 +96,6 @@ a {
     height: 20vw;
     border-radius: 5vw;
 }
+
+.animate-to-left{position:relative;left:100%;animation:animatetoleft 0.4s}@keyframes animatetoleft{from{left:-100%;} to{left:0%;}}
+.animate-to-right{position:relative;right:100%;animation:animatetoright 0.4s}@keyframes animatetoright{from{right:-100%;} to{right:0%;}}

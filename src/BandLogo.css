@@ -1,8 +1,8 @@
 .BandLogoWrapper {
     display: flex;
     justify-content: center;
-    padding: 20px;
     white-space: nowrap;
+    user-select: none;
 }
 
 .BandLogoV {

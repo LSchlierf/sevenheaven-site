@@ -38,12 +38,15 @@ function BandLogo(props) {
   const fontSize = props.fontSize || "11vw"
   const color = props.color || 'white'
   const backgroundColor = props.backgroundColor || 'black'
+  const padding = props.padding || '20px'
+  const onClick = props.onClick
   const wrapperStyleElement = {
-    backgroundColor: backgroundColor
+    backgroundColor: backgroundColor,
+    padding: padding
   }
 
   return (
-    <div className='BandLogoWrapper' style={wrapperStyleElement}>
+    <div className='BandLogoWrapper' style={wrapperStyleElement} onClick={onClick}>
       {renderText(inputText, fontSize, color)}
     </div>
   )

@@ -13,7 +13,7 @@ function desktopPage(props) {
 
 function mobilePage(props) {
   return (
-    <div className='headerWrapper'>
+    <div className='headerWrapper' id={props.id}>
       <span className='gradientL'/>
       <span className='titleWrapper'>
         <BandLogo text={props.text} fontSize={props.fontSize} backgroundColor='rgba(0,0,0,0)'/>

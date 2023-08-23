@@ -14,7 +14,7 @@ function desktopBar() {
 function mobileBar() {
   return (
     <div className='mobileBar'>
-      <BandLogo fontsize='8vw' />
+      <BandLogo fontSize='8vw' />
       <div className='imgContainer'>
         <img src='Logo.png' alt='Bandlogo'/>
       </div>

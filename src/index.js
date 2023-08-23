@@ -11,7 +11,7 @@ window.addEventListener('resize', updateScrolled)
 function updateScrolled() {
   const htmlElement = document.documentElement
   const screenScrolled = htmlElement.scrollTop / htmlElement.clientHeight
-  htmlElement.style.setProperty("--scrolled", Math.min(screenScrolled, 1))
+  htmlElement.style.setProperty("--scrolled", Math.min(screenScrolled, 0.5) * 2)
 }
 
 updateScrolled()

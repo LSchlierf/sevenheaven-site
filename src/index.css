@@ -17,3 +17,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bgImgContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bgImgContainer > img {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: inherit;
+  filter: blur(10px);
+}
+
+.subPageContent {
+  position: absolute;
+  width: 100vw;
+  top: 40vw;
+}

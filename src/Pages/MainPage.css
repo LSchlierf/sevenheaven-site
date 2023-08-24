@@ -14,8 +14,6 @@
     flex-shrink: 0;
     width: calc(100vw + ((1 - var(--scrolled)) * 10vw));
     height: calc(100vh + ((1 - var(--scrolled)) * 10vh));
-    /* width: 100vw;
-    height: 100vh; */
     z-index: inherit;
     object-fit: cover;
 }
@@ -23,6 +21,24 @@
 .landingContent {
     width: 100vw;
     height:100vh
+}
+
+.goLeft, .goRight, .burger, .contact {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contact {
+    width: fit-content;
+}
+
+.contactWrapper {
+    position: absolute;
+    bottom: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 .goLeft {
@@ -34,8 +50,6 @@
 }
 
 .goLeft, .goRight, .burger {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
     padding: 12px;
     padding-bottom: 6px;
     position: absolute;
@@ -99,7 +113,7 @@
         transform: translateY(0px) rotate(0deg);
     }
     to {
-        transform: translateY(12px) rotate(315deg);
+        transform: translateY(12px) rotate(135deg);
     }
 }
 
@@ -123,10 +137,13 @@
 }
 
 @keyframes b1down {
-    from {
+    0%{
         opacity: 1;
     }
-    to {
+    50%{
+        opacity: 0;
+    }
+    100%{
         opacity: 0;
     }
 }
@@ -165,7 +182,7 @@
 
 @keyframes b2up {
     from {
-        transform: translateY(-12px) rotate(-315deg);
+        transform: translateY(-12px) rotate(-135deg);
     }
     to {
         transform: translateY(0px) rotate(0deg);
@@ -173,6 +190,19 @@
 }
 
 /* end burger animations */
+
+.menu {
+    animation: menu-opacity 0.2s;
+}
+
+@keyframes menu-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 } /* end media query prefers-reduced-motion:no-preference */
 
@@ -189,6 +219,7 @@
     border-radius: 20px;
     z-index: 2;
     display: grid;
+    opacity: 1;
 }
 
 .menuImgContainer {
@@ -197,8 +228,9 @@
 }
 
 .menuImgContainer > img {
-    padding-top: calc(40px + 5vw);
-    height: 20vw;
+    padding-top: 5vw;
+    /* padding-top: calc(40px + 5vw); */
+    height: 15vw;
 }
 
 .menuItem {

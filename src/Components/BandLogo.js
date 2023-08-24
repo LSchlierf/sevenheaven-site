@@ -1,9 +1,10 @@
 import './BandLogo.css'
 
-function renderText(inputText, fontSize, color) {
+function renderText(inputText, fontSize, color, cursor) {
   const styleElement = {
     fontSize: fontSize,
-    color: color
+    color: color,
+    cursor: cursor,
   }
   let output = []
   let inputRest = inputText
@@ -40,14 +41,15 @@ function BandLogo(props) {
   const backgroundColor = props.backgroundColor || 'black'
   const padding = props.padding || '20px'
   const onClick = props.onClick
+  const cursor = props.cursor || 'auto'
   const wrapperStyleElement = {
     backgroundColor: backgroundColor,
-    padding: padding
+    padding: padding,
   }
 
   return (
-    <div className='BandLogoWrapper' style={wrapperStyleElement} onClick={onClick}>
-      {renderText(inputText, fontSize, color)}
+    <div className={'BandLogoWrapper' + (props.noCenter ? ' noCenter' : '')} style={wrapperStyleElement} onClick={onClick}>
+      {renderText(inputText, fontSize, color, cursor)}
     </div>
   )
 }

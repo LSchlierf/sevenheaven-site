@@ -3,13 +3,11 @@
     align-items: center;
     display: flex;
     height: max-content;
-    padding-bottom: 10vw;
 }
 
 .gradientL, .gradientR {
     height: 1vw;
     width: 20%;
-    display: inline-block;
 }
 
 .gradientL {
@@ -25,4 +23,8 @@
 .titleWrapper {
     width: 40%;
     display: inline-block;
+}
+
+.sub > .titleWrapper {
+    width: 20% !important;
 }

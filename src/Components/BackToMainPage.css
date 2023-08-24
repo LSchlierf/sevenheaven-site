@@ -1,0 +1,20 @@
+.backWrapper {
+    position: relative;
+    left: 10vw;
+    right: 10vw;
+    width: calc(80vw - 40px);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+}
+
+.backIcon {
+    padding-top: 1vw;
+}
+
+.backText {
+    font-family: 'Montserrat', sans-serif;
+    font-size: inherit;
+}

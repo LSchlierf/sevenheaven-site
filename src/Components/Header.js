@@ -12,8 +12,12 @@ function desktopPage(props) {
 }
 
 function mobilePage(props) {
+  const paddingBottom = props.paddingBottom || '10vw'
+  const styleElement = {
+    paddingBottom: paddingBottom
+  }
   return (
-    <div className='headerWrapper' id={props.id}>
+    <div className={'headerWrapper' + (props.sub ? ' sub' : '')} id={props.id} style={styleElement}>
       <span className='gradientL'/>
       <span className='titleWrapper'>
         <BandLogo text={props.text} fontSize={props.fontSize} backgroundColor='rgba(0,0,0,0)'/>

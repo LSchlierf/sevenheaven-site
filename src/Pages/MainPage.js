@@ -1,15 +1,15 @@
 import { isBrowser, isTablet, } from 'react-device-detect'
 import React, { useState } from 'react';
-import TitleBar from './TitleBar';
 import './MainPage.css'
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs"
 import { TiMail } from "react-icons/ti"
 import { IconContext } from 'react-icons/lib';
-import Header from './Header';
-import ImageCard from './ImageCard';
-import PageFooter from './PageFooter';
-import BandLogo from './BandLogo';
+import TitleBar from '../Components/TitleBar';
+import Header from '../Components/Header';
+import ImageCard from '../Components/ImageCard';
+import PageFooter from '../Components/PageFooter';
+import BandLogo from '../Components/BandLogo';
 
 let imagesM = ['bg/2.jpeg', 'bg/0.jpg', 'bg/1.JPG']
 
@@ -80,7 +80,7 @@ function mobilePage(img, setImg, menu, setMenu) {
     const titleBar = document.getElementsByClassName('mobileBar')[0]
     const offset = 80 - titleBar.getBoundingClientRect().bottom
     const y = element.getBoundingClientRect().top + window.scrollY + offset
-    window.scrollTo({top: y, behavior: 'smooth'})
+    window.scrollTo({ top: y, behavior: 'smooth' })
   }
 
   return (
@@ -103,37 +103,44 @@ function mobilePage(img, setImg, menu, setMenu) {
           <div className='burgerLine' id='burger1' />
           <div className='burgerLine' id='burger2' />
         </div>
+        <div className='contactWrapper'>
+          <div className='contact'>
+            <a href='/kontakt' style={{ textDecoration: 'none' }}>
+              <BandLogo text='Anfragen' fontSize='4vw' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
+            </a>
+          </div>
+        </div>
         {menu
           ?
           <div className='menu'>
             <div className='menuImgContainer'>
-              <img src='Logo.png' alt='Bandlogo' />
+              <img src='logo192.png' alt='Bandlogo' />
             </div>
             <div className='menuItem'>
-              <BandLogo text='Home' fontSize='6vw' padding='10px' backgroundColor='rgba(0,0,0,0)' onClick={toggleBurger}/>
+              <BandLogo text='Home' fontSize='6vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={toggleBurger} />
             </div>
             <div className='menuItem'>
-              <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' onClick={() => scrollTo('musik')} />
-              <a href='/galerie' style={{textDecoration: 'none'}}>
-                <BandLogo text='Galerie' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' />
+              <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('musik')} />
+              <a href='/galerie' style={{ textDecoration: 'none' }}>
+                <BandLogo text='Galerie' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>
-              <a href='/repertoire' style={{textDecoration: 'none'}}>
-                <BandLogo text='Repertoire' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' />
-              </a>
-            </div>
-            <div className='menuItem'>
-              <BandLogo text='Angebot' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' onClick={() => scrollTo('angebot')}/>
-            </div>
-            <div className='menuItem'>
-              <BandLogo text='Über uns' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' onClick={() => scrollTo('wir')}/>
-              <a href='/wir' style={{textDecoration: 'none'}}>
-                <BandLogo text='Die Band' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' />
+              <a href='/repertoire' style={{ textDecoration: 'none' }}>
+                <BandLogo text='Repertoire' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>
             </div>
             <div className='menuItem'>
-              <BandLogo text='Kontakt' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' onClick={() => scrollTo('kontakt')}/>
-              <a href='/kontakt' style={{textDecoration: 'none'}}>
-                <BandLogo text='Kontaktformular' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' />
+              <BandLogo text='Angebot' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('angebot')} />
+            </div>
+            <div className='menuItem'>
+              <BandLogo text='Über uns' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('wir')} />
+              <a href='/wir' style={{ textDecoration: 'none' }}>
+                <BandLogo text='Die Band' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
+              </a>
+            </div>
+            <div className='menuItem'>
+              <BandLogo text='Kontakt' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('kontakt')} />
+              <a href='/kontakt' style={{ textDecoration: 'none' }}>
+                <BandLogo text='Kontaktformular' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>
             </div>
           </div>
@@ -141,7 +148,7 @@ function mobilePage(img, setImg, menu, setMenu) {
         }
       </div >
       <div className='scrollContent' >
-        <Header text='musik' id='musik'/>
+        <Header text='musik' id='musik' />
         <ImageCard text='40-jähriges Westpark Jubiläum (Highlights)' />
         <ImageCard text='Musikalisches Weinfest 2023 (Highlights)' />
         <div className='textBoxWrapper'>
@@ -150,7 +157,7 @@ function mobilePage(img, setImg, menu, setMenu) {
           </div>
         </div>
         <ImageCard text='Wir erweitern unser Repertoire regelmäßig. Vielleicht sind ja auch ein paar Deiner Lieblingssongs dabei?' fontSize='medium' />
-        <Header text='Angebot' fontSize='7.5vw' id='angebot'/>
+        <Header text='Angebot' fontSize='7.5vw' id='angebot' />
         <ImageCard text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor='darkred' />
         <ImageCard text='Zu einer guten Hochzeit gehört Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor='darkred' />
         <ImageCard text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor='darkred' />
@@ -159,14 +166,14 @@ function mobilePage(img, setImg, menu, setMenu) {
             Interesse? Kontaktiere uns gerne <a href='/kontakt'>hier</a>.
           </div>
         </div>
-        <Header text='Über uns' fontSize='7vw' id='wir'/>
+        <Header text='Über uns' fontSize='7vw' id='wir' />
         <ImageCard text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' />
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} >
             <a href='/wir'>Hier</a> erfährst du mehr über unsere einzelnen Bandmitglieder.
           </div>
         </div>
-        <Header text='Kontakt' fontSize='7.5vw' id='kontakt'/>
+        <Header text='Kontakt' fontSize='7.5vw' id='kontakt' />
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'darkred', fontSize: 'large' }} >
             Schreibe uns eine Nachricht!

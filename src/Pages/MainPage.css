@@ -2,7 +2,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: start;
+    /* align-items: start; */
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -261,45 +261,6 @@
 
 a {
     color: white
-}
-
-.socials {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-}
-
-.socialContainer {
-    display: grid;
-    width: 50%;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    padding-bottom: 10vw;
-}
-
-#insta {
-    font-size: 3vw;
-}
-
-#mail {
-    font-size: 2vw;
-}
-
-.iconContainer {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2vw;
-}
-
-.icon {
-    background-color: darkred;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    width: 20vw;
-    height: 20vw;
-    border-radius: 5vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {

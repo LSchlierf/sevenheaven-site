@@ -6,6 +6,7 @@ import Header from '../Components/Header';
 import ImageCard from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BackToMainPage from '../Components/BackToMainPage';
+import AudioPlayer from '../Components/AudioPlayer';
 
 function desktopPage() {
   return mobilePage()
@@ -14,6 +15,7 @@ function desktopPage() {
     </>
   )
 }
+
 
 function mobilePage() {
   return (
@@ -35,7 +37,7 @@ function mobilePage() {
         <ImageCard text='Musikalisches Weinfest 2023' backgroundColor='darkred' fontSize='medium'/>
         <ImageCard text='JuHa Neuried 2023' backgroundColor='darkred' fontSize='medium'/>
         <Header text='Studio' fontSize='6vw' sub paddingBottom='5vw'/>
-        Todo: Studioaufnahmen einfügen
+        <AudioPlayer title="Don't stop believing" src='audio/dontstopbelieving.mp3'/>
         <BackToMainPage/>
         <div style={{paddingBottom: '10vh'}}/>
         <PageFooter />

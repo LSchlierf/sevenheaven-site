@@ -2,14 +2,13 @@ import { isBrowser, isTablet, } from 'react-device-detect'
 import React, { useState } from 'react';
 import './MainPage.css'
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import { BsInstagram } from "react-icons/bs"
-import { TiMail } from "react-icons/ti"
 import { IconContext } from 'react-icons/lib';
 import TitleBar from '../Components/TitleBar';
 import Header from '../Components/Header';
 import ImageCard from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BandLogo from '../Components/BandLogo';
+import Socials from '../Components/Socials';
 
 let imagesM = ['bg/2.jpeg', 'bg/0.jpg', 'bg/1.JPG']
 
@@ -175,34 +174,11 @@ function mobilePage(img, setImg, menu, setMenu) {
         </div>
         <Header text='Kontakt' fontSize='7.5vw' id='kontakt' />
         <div className='textBoxWrapper'>
-          <div className='textBox' style={{ background: 'darkred', fontSize: 'large' }} >
+          <a href='/kontakt' className='textBox' style={{ background: 'darkred', fontSize: 'large' }} >
             Schreibe uns eine Nachricht!
-          </div>
+          </a>
         </div>
-        <div className='socials'>
-          <span className='socialContainer' id='insta'>
-            <div className='iconContainer'>
-              <a className='icon' href='https://instagram.com/sevenheaven.band' target='_blank' rel='noopener noreferrer'>
-                <IconContext.Provider value={{ color: 'white', size: '12vw' }} >
-                  <BsInstagram />
-                </IconContext.Provider>
-              </a>
-            </div>
-            <a href='https://instagram.com/sevenheaven.band' target='_blank' rel='noopener noreferrer'>
-              @sevenheaven.band
-            </a>
-          </span>
-          <span className='socialContainer' id='mail'>
-            <div className='iconContainer'>
-              <a className='icon' href='mailto:sevenheaven.partyband@gmail.com'>
-                <IconContext.Provider value={{ color: 'white', size: '15vw', style: { 'paddingBottom': '2vw' } }} >
-                  <TiMail />
-                </IconContext.Provider>
-              </a>
-            </div>
-            <a href='mailto:sevenheaven.partyband@gmail.com'>sevenheaven.partyband@gmail.com</a>
-          </span>
-        </div>
+        <Socials />
         <PageFooter />
       </div>
     </>

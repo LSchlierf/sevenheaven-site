@@ -26,25 +26,25 @@ function mobilePage() {
         <Header text='Die Band' fontSize='8vw' paddingBottom='0' />
         <div className='portraits'>
           <div className='portraitWrapper'>
-            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Lucas Schlierf<div className='subText'>Leadgesang</div></>} />
+            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Lucas Schlierf<div className='subText'>Leadgesang</div></>} img='band/Lucas.jpg'/>
           </div>
           <div className='portraitWrapper'>
-            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Luisa Loher<div className='subText'>Leadgesang</div></>} />
+            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Luisa Loher<div className='subText'>Leadgesang</div></>} img='band/Luisa.jpg'/>
           </div>
           <div className='portraitWrapper'>
-            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Florian Döhr<div className='subText'>Leadgitarre</div></>} />
+            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Florian Döhr<div className='subText'>Leadgitarre</div></>} img='band/Florian.jpg'/>
           </div>
           <div className='portraitWrapper'>
-            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Leo Hellerer<div className='subText'>Rhythmusgitarre + Bass</div></>} />
+            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Leo Hellerer<div className='subText'>Rhythmusgitarre + Bass</div></>} img='band/Leo.jpg'/>
           </div>
           <div className='portraitWrapper'>
-            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Julian Höflmaier<div className='subText'>Bass + Gesang</div></>} />
+            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Julian Höflmaier<div className='subText'>Bass + Gesang</div></>} img='band/Julian.jpg'/>
           </div>
           <div className='portraitWrapper'>
-            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Daniel Bopp<div className='subText'>Schlagzeug + Gesang</div></>} />
+            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Daniel Bopp<div className='subText'>Schlagzeug + Gesang</div></>} img='band/Daniel.jpg'/>
           </div>
           <div className='portraitWrapper'>
-            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Jakob Friederich<div className='subText'>Piano + Gesang</div></>} />
+            <ImageCard version='portrait' fontSize='smaller' noCenter text={<>Jakob Friederich<div className='subText'>Piano + Gesang</div></>} img='band/Jakob.jpg'/>
           </div>
         </div>
         <div style={{paddingBottom: 30}} />

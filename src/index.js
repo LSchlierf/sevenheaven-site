@@ -6,6 +6,7 @@ import MainPage from './Pages/MainPage';
 import RepertoirePage from './Pages/RepertoirePage';
 import GalleryPage from './Pages/GalleryPage';
 import BandPage from './Pages/BandPage';
+import ContactPage from './Pages/ContactPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -26,6 +27,7 @@ root.render(
       <Route path='/galerie'    element={<GalleryPage/>   }/>
       <Route path='/repertoire' element={<RepertoirePage/>}/>
       <Route path='/wir'        element={<BandPage/>      }/>
+      <Route path='/kontakt'    element={<ContactPage/>   }/>
     </Routes>
   </BrowserRouter>
 );

@@ -13,10 +13,8 @@ function AudioPlayer(props) {
     const audioElement = document.getElementById(audio)
     if(audioElement.paused) {
       audioElement.play()
-      setIcon(<GrPauseFill/>)
     } else {
       audioElement.pause()
-      setIcon(<GrPlayFill/>)
     }
   }
   function changeTimelinePosition () {
@@ -24,12 +22,8 @@ function AudioPlayer(props) {
     const timelineElement = document.getElementById('timeline')
     const percentagePosition = (100*audioElement.currentTime) / audioElement.duration
     timelineElement.style.backgroundSize = percentagePosition + '% 100%'
-    // timelineElement.value = percentagePosition;
     setTime(percentagePosition)
     setTimeStamp(new Date(audioElement.currentTime * 1000).toISOString().substring(14, 19))
-  }
-  function audioEnded() {
-    setIcon(<GrPlayFill/>)
   }
   function changeSeek () {
     const audioElement = document.getElementById(audio)
@@ -54,7 +48,7 @@ function AudioPlayer(props) {
             </div>
           </div>
         </div>
-        <audio src={audio} id={audio} onTimeUpdate={changeTimelinePosition} onEnded={audioEnded}/>
+        <audio src={audio} id={audio} onTimeUpdate={changeTimelinePosition} onPause={() => setIcon(<GrPlayFill/>)} onPlay={() => setIcon(<GrPauseFill/>)}/>
         <div className='trackTitle'>
           {title}
         </div>

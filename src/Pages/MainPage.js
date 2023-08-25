@@ -156,6 +156,11 @@ function mobilePage(img, setImg, menu, setMenu) {
           </div>
         </div>
         <ImageCard text='Wir erweitern unser Repertoire regelmäßig. Vielleicht sind ja auch ein paar Deiner Lieblingssongs dabei?' fontSize='medium' />
+        <div className='textBoxWrapper'>
+          <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} >
+            Eine Übersicht über unser Repertoire indest du <a href='/repertoire'>hier</a>.
+          </div>
+        </div>
         <Header text='Angebot' fontSize='7.5vw' id='angebot' />
         <ImageCard text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor='darkred' />
         <ImageCard text='Zu einer guten Hochzeit gehört Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor='darkred' />

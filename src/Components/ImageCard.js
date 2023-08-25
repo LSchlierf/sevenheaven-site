@@ -15,20 +15,48 @@ function mobilePage(props) {
   const text = props.text || 'placeholder text lorem ipsum dolor sit amet'
   const fontSize = props.fontSize || 'larger'
   const backgroundColor = props.backgroundColor || 'black'
+  const version = props.version || 'normal'
+  const height = { 'normal': '55%', 'portrait': '180%' }[version]
+  const textAlign = { 'normal': 'center', 'portrait': '' }[version]
   const styleElement = {
     fontSize: fontSize,
-    backgroundColor: backgroundColor
+    backgroundColor: backgroundColor,
+    textAlign: textAlign
   }
   return (
-    <div className='imageCardWrapper' >
-      <div className='imageCard'>
-        <img src={img} alt='card' />
-      </div>
-      <div className='caption'>
-        <div className='textContainer' style={styleElement}>
-          {text}
-        </div>
-      </div>
+    <div className='imageCardWrapperWrapper'>
+      {
+        version === 'portrait' ?
+          (
+            <div className='imageCardWrapper' style={{ paddingBottom: height }} >
+              <div className='imageCard'>
+                <div className='imageWrapper'>
+                  <img src={img} alt='card' />
+                </div>
+                <div className='caption'>
+                  <div className='textContainer' style={styleElement}>
+                    {text}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className='imageCardWrapper' style={{ paddingBottom: height }} >
+                <div className='imageCard'>
+                  <div className='imageWrapper'>
+                    <img src={img} alt='card' />
+                  </div>
+                </div>
+              </div>
+              <div className='caption'>
+                <div className='textContainer' style={styleElement}>
+                  {text}
+                </div>
+              </div>
+            </>
+          )
+      }
     </div>
   )
 }

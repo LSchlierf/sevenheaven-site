@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './Pages/MainPage';
 import RepertoirePage from './Pages/RepertoirePage';
 import GalleryPage from './Pages/GalleryPage';
+import BandPage from './Pages/BandPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,9 +22,10 @@ updateScrolled()
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<MainPage/>}/>
-      <Route path='/galerie' element={<GalleryPage/>}/>
+      <Route path='/'           element={<MainPage/>      }/>
+      <Route path='/galerie'    element={<GalleryPage/>   }/>
       <Route path='/repertoire' element={<RepertoirePage/>}/>
+      <Route path='/wir'        element={<BandPage/>      }/>
     </Routes>
   </BrowserRouter>
 );

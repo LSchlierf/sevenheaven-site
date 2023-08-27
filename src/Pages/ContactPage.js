@@ -1,5 +1,5 @@
 import React from 'react';
-// import { isBrowser, isTablet, } from 'react-device-detect'
+import { isBrowser, isTablet, } from 'react-device-detect'
 import './ContactPage.css'
 import TitleBar from '../Components/TitleBar';
 import Header from '../Components/Header';
@@ -42,6 +42,7 @@ function ContactPage() {
     }
   }
 
+  const isDesktop = isBrowser || isTablet
   return (
     <>
       <TitleBar />
@@ -49,7 +50,7 @@ function ContactPage() {
         <img src='bg/0.jpg' alt='background' />
       </div>
       <div className='subPageContent'>
-        <Header text='Kontakt' fontSize='8vw' paddingBottom='0' />
+        <Header text='Kontakt' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />
         <form className='contactForm' onSubmit={(event) => {event.preventDefault(); submit()}}>
           <input type='text' placeholder='Deine Mail-Adresse...' id='contactMail' onInput={checkMail}/>
           <div style={{ height: '20px' }} />

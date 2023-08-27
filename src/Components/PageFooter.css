@@ -28,3 +28,9 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 5vw;
 }
+
+@media only screen and (min-width: 768px) {
+    .legal {
+        font-size: 30px;
+    }
+}

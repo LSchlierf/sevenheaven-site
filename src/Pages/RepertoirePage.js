@@ -10,6 +10,7 @@ import BackToMainPage from '../Components/BackToMainPage';
 import PageFooter from '../Components/PageFooter';
 import { BsChevronDown } from "react-icons/bs";
 import { IconContext } from 'react-icons';
+const isDesktop = isBrowser || isTablet
 
 function RepertoireCard(title, songs, index) {
   return (
@@ -33,13 +34,14 @@ function RepertoireCard(title, songs, index) {
 }
 
 function RepertoireItem(item, index) {
+  const noCenter = isDesktop ? false : true
   if (item.songs.length === 0) {
     return (<></>)
   }
   return (
     <div className='repertoireItem' key={index}>
       <div className='repertoireLetter'>
-        <BandLogo noCenter text={item.letter} backgroundColor='rgba(0,0,0,0)' padding='0' />
+        <BandLogo noCenter={noCenter} text={item.letter} backgroundColor='rgba(0,0,0,0)' padding='0' fontSize={isDesktop ? '500%' : '300%'}/>
       </div>
       <div className='repertoireSongs'>
         {item.songs.map((item, index) => {
@@ -62,15 +64,7 @@ function gotoRepertoire() {
   window.scrollTo({ top: y, behavior: 'smooth' })
 }
 
-function desktopPage() {
-  return mobilePage()
-  return (
-    <>
-    </>
-  )
-}
-
-function mobilePage() {
+function RepertoirePage() {
   return (
     <>
       <TitleBar />
@@ -78,7 +72,7 @@ function mobilePage() {
         <img src='bg/0.jpg' alt='background' />
       </div>
       <div className='subPageContent'>
-        <Header text='Repertoire' fontSize='6vw' paddingBottom='0' />
+        <Header text='Repertoire' fontSize={isDesktop ? '250%' : '150%'} paddingBottom='0' />
         <div className='repertoireHeadliners'>
           {
             Headliners.map((item, index) => RepertoireCard(item.title, item.songs, index))
@@ -95,7 +89,7 @@ function mobilePage() {
           </IconContext.Provider>
         </div>
         <div style={{ padding: '3vw' }} />
-        <BackToMainPage backgroundColor='darkred' fontSize='4vw'/>
+        <BackToMainPage backgroundColor='darkred'/>
         <div className='repertoire'>
           {
             Repertoire.map(RepertoireItem)
@@ -106,18 +100,6 @@ function mobilePage() {
         <div style={{ padding: '3vw' }} />
         <PageFooter />
       </div>
-    </>
-  )
-}
-
-function RepertoirePage() {
-  return (
-    <>
-      {(isBrowser || isTablet) ?
-        desktopPage()
-        :
-        mobilePage()
-      }
     </>
   )
 }

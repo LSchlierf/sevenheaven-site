@@ -1,13 +1,37 @@
+.headerWrapperWrapper {
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+}
+
 .headerWrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* justify-content: center;
+    align-items: center;
+    display: flex; */
+    /* height: fit-content; */
+}
+
+.gradientWrapper {
+    height: 100%;
+    width: fit-content;
+    display: grid;
     justify-content: center;
     align-items: center;
-    display: flex;
-    height: max-content;
 }
 
 .gradientL, .gradientR {
-    height: 1vw;
-    width: 20%;
+    height: 5px;
+    width: 80px;
+}
+
+.sub > .gradientWrapper > .gradientL, .sub > .gradientWrapper > .gradientR {
+    width: 70px;
+    height: 4px;
 }
 
 .gradientL {
@@ -21,10 +45,36 @@
 }
 
 .titleWrapper {
-    width: 40%;
+    width: fit-content;
     display: inline-block;
 }
 
 .sub > .titleWrapper {
-    width: 20% !important;
+    /* width: 20% !important; */
+}
+
+@media only screen and (min-width: 768px) {
+    /* .gradientL {
+        margin-left: 25%;
+        margin-right: 0;
+    }
+
+    .gradientR {
+        margin-right: 25%;
+        margin-left: 0;
+    } */
+    .headerWrapper {
+        width: 50vw;
+    }
+
+    .gradientL, .gradientR {
+        height: 5px;
+        width: 120px;
+    }
+
+
+    .sub > .titleWrapper {
+        /* width: 20vw !important; */
+    }
+
 }

@@ -4,17 +4,10 @@ import './BackToMainPage.css'
 import { BsArrowLeft } from "react-icons/bs";
 import { IconContext } from 'react-icons';
 
-function desktopPage(props) {
-  return mobilePage(props)
-  return (
-    <>
-    </>
-  )
-}
-
-function mobilePage(props) {
+function BackToMainPage(props) {
   const backgroundColor = props.backgroundColor || 'rgba(0,0,0,0.5)'
-  const fontSize = props.fontSize || '5vw'
+  const isDesktop = isBrowser || isTablet
+  const fontSize = props.fontSize || (isDesktop ? '30px' : '5vw')
   const styleElement = {
     backgroundColor: backgroundColor,
     fontSize: fontSize,
@@ -23,7 +16,7 @@ function mobilePage(props) {
   return (
     <a href='/' className='backWrapper' style={styleElement}>
       <div className='backIcon'>
-        <IconContext.Provider value={{color: 'white', size: '7vw'}}>
+        <IconContext.Provider value={{color: 'white', size: (isDesktop ? 50 : 30)}}>
           <BsArrowLeft />
         </IconContext.Provider>
       </div>
@@ -31,18 +24,6 @@ function mobilePage(props) {
         Zurück zur Startseite
       </div>
     </a>
-  )
-}
-
-function BackToMainPage(props) {
-  return (
-    <>
-      {(isBrowser || isTablet) ?
-        desktopPage(props)
-        :
-        mobilePage(props)
-      }
-    </>
   )
 }
 

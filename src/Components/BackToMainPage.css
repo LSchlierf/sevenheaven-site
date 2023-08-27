@@ -2,13 +2,21 @@
     position: relative;
     left: 10vw;
     right: 10vw;
-    width: calc(80vw - 40px);
+    width: 80vw;
     display: flex;
     justify-content: space-around;
     border-radius: 15px;
     padding: 20px;
     align-items: center;
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
+}
+
+@media only screen and (min-width: 768px) {
+    .backWrapper {
+        width: 40vw;
+        left: 30vw;
+        right: 30vw;
+    }
 }
 
 .backIcon {

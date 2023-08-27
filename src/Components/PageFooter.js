@@ -2,15 +2,7 @@ import React from 'react';
 import { isBrowser, isTablet, } from 'react-device-detect'
 import './PageFooter.css'
 
-function desktopPage() {
-  return mobilePage()
-  return (
-    <>
-    </>
-  )
-}
-
-function mobilePage() {
+function PageFooter() {
   return (
     <div className='footer'>
       <div className='footerGradient' />
@@ -27,18 +19,6 @@ function mobilePage() {
         </div>
       </div>
     </div>
-  )
-}
-
-function PageFooter() {
-  return (
-    <>
-      {(isBrowser || isTablet) ?
-        desktopPage()
-        :
-        mobilePage()
-      }
-    </>
   )
 }
 

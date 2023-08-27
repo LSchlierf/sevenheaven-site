@@ -17,12 +17,18 @@ function mobilePage(props) {
     paddingBottom: paddingBottom
   }
   return (
-    <div className={'headerWrapper' + (props.sub ? ' sub' : '')} id={props.id} style={styleElement}>
-      <span className='gradientL'/>
-      <span className='titleWrapper'>
-        <BandLogo text={props.text} fontSize={props.fontSize} backgroundColor='rgba(0,0,0,0)'/>
-      </span>
-      <span className='gradientR'/>
+    <div className='headerWrapperWrapper'>
+      <div className={'headerWrapper' + (props.sub ? ' sub' : '')} id={props.id} style={styleElement}>
+        <div className='gradientWrapper'>
+          <div className='gradientL' />
+        </div>
+        <div className='titleWrapper'>
+          <BandLogo text={props.text} fontSize={props.fontSize} backgroundColor='rgba(0,0,0,0)' />
+        </div>
+        <div className='gradientWrapper'>
+          <div className='gradientR' />
+        </div>
+      </div>
     </div>
   )
 }

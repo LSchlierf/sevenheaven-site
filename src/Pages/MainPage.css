@@ -60,6 +60,7 @@
 }
 
 .burger {
+    position: fixed;
     bottom: 5vh;
     right: 5vw;
     height: 30px;
@@ -208,7 +209,7 @@
 } /* end media query prefers-reduced-motion:no-preference */
 
 .menu {
-    position: absolute;
+    position: fixed;
     width: auto;
     height: auto;
     top: 4vh;
@@ -252,15 +253,27 @@
 }
 
 .textBox {
-    width: calc(80vw - 30px);
+    width: 80vw;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding: 15px;
     border-radius: 15px;
 }
 
+@media only screen and (min-width: 768px) {
+    .textBox {
+        width: 40vw;
+    }
+}
+
 a {
     color: white
+}
+
+div[class^='contentContainer'] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {

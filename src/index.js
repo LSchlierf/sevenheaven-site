@@ -43,3 +43,15 @@ left right anfragen   1
 Main content          0
 bg img               -1
 */
+
+
+/*
+TODO: 
+- burger menü fixed
+- Abstände checken
+- zurück mit location
+- Icons
+- Page footer kleiner
+- hintergrund bild scrollt hoch rot
+- hintergrund bild scrollt hoch schwarz
+*/

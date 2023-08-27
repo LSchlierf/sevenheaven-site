@@ -31,10 +31,10 @@ function mobilePage(props) {
           <div className='imageCard'>
             <div className='imageWrapper'>
               <img src={img} alt='card' />
-            </div>
-            <div className='caption'>
-              <div className='textContainer' style={styleElement}>
-                {text}
+              <div className='caption transparent'>
+                <div className='textContainer' style={styleElement}>
+                  {text}
+                </div>
               </div>
             </div>
           </div>

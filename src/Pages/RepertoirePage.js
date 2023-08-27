@@ -58,8 +58,11 @@ function RepertoireItem(item, index) {
 
 function gotoRepertoire() {
   const element = document.getElementsByClassName('repertoire')[0]
-  const titleBar = document.getElementsByClassName('mobileBar')[0]
-  const offset = 30 - titleBar.getBoundingClientRect().bottom
+  let offset = 0
+  if (!isDesktop){
+    const titleBar = document.getElementsByClassName('mobileBar')[0]
+    offset = 30 - titleBar.getBoundingClientRect().bottom
+  }
   const y = element.getBoundingClientRect().top + window.scrollY + offset
   window.scrollTo({ top: y, behavior: 'smooth' })
 }

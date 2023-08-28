@@ -2,6 +2,23 @@
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
+    height: 450px
+}
+
+.contactSuccess {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successText {
+    font-size: 150%;
+    text-align: center;
+    width: 70%;
 }
 
 .otherContact {

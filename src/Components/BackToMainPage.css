@@ -1,8 +1,8 @@
 .backWrapper {
     position: relative;
-    left: 10vw;
-    right: 10vw;
-    width: 80vw;
+    left: 10%;
+    right: 10%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     border-radius: 15px;
@@ -13,9 +13,9 @@
 
 @media only screen and (min-width: 768px) {
     .backWrapper {
-        width: 40vw;
-        left: 30vw;
-        right: 30vw;
+        width: 40%;
+        left: 30%;
+        right: 30%;
     }
 }
 

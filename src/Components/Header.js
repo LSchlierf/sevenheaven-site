@@ -1,17 +1,8 @@
 import React from 'react';
-import { isBrowser, isTablet, } from 'react-device-detect'
 import BandLogo from './BandLogo';
 import './Header.css'
 
-function desktopPage(props) {
-  return mobilePage(props)
-  return (
-    <>
-    </>
-  )
-}
-
-function mobilePage(props) {
+function Header(props) {
   const paddingBottom = props.paddingBottom || '10vw'
   const styleElement = {
     paddingBottom: paddingBottom
@@ -30,18 +21,6 @@ function mobilePage(props) {
         </div>
       </div>
     </div>
-  )
-}
-
-function Header(props) {
-  return (
-    <>
-      {(isBrowser || isTablet) ?
-        desktopPage(props)
-        :
-        mobilePage(props)
-      }
-    </>
   )
 }
 

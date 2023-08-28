@@ -1,16 +1,7 @@
 import React from 'react';
-import { isBrowser, isTablet, } from 'react-device-detect'
 import './ImageCard.css'
 
-function desktopPage(props) {
-  return mobilePage(props)
-  return (
-    <>
-    </>
-  )
-}
-
-function mobilePage(props) {
+function ImageCard(props) {
   const img = props.img || 'placeholder.png'
   const vid = props.vid || 'https://www.youtube.com/embed/TApmI8YtYhc?si=xzFtA1pWDk0bj66u'
   const text = props.text || 'placeholder text lorem ipsum dolor sit amet'
@@ -73,18 +64,6 @@ function mobilePage(props) {
         </div>
       </div>
     </div>
-  )
-}
-
-function ImageCard(props) {
-  return (
-    <>
-      {(isBrowser || isTablet) ?
-        desktopPage(props)
-        :
-        mobilePage(props)
-      }
-    </>
   )
 }
 

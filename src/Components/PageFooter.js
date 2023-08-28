@@ -1,5 +1,4 @@
 import React from 'react';
-import { isBrowser, isTablet, } from 'react-device-detect'
 import './PageFooter.css'
 
 function PageFooter() {

@@ -1,20 +1,10 @@
 import React from 'react';
-import { isBrowser, isTablet, } from 'react-device-detect'
 import './Socials.css'
 import { BsInstagram } from "react-icons/bs"
 import { TiMail } from "react-icons/ti"
 import { IconContext } from 'react-icons/lib';
 
-
-function desktopPage() {
-  return mobilePage()
-  return (
-    <>
-    </>
-  )
-}
-
-function mobilePage() {
+function Socials() {
   return (
     <div className='socials'>
       <span className='socialContainer' id='insta'>
@@ -40,18 +30,6 @@ function mobilePage() {
         <a href='mailto:sevenheaven.partyband@gmail.com'>sevenheaven.partyband@gmail.com</a>
       </span>
     </div>
-  )
-}
-
-function Socials() {
-  return (
-    <>
-      {(isBrowser || isTablet) ?
-        desktopPage()
-        :
-        mobilePage()
-      }
-    </>
   )
 }
 

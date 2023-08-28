@@ -2,8 +2,8 @@ import React from 'react';
 import { isBrowser, isTablet, } from 'react-device-detect'
 import './RepertoirePage.css'
 import TitleBar from '../Components/TitleBar';
-import Headliners from './RepertoireHeadliners.json'
-import Repertoire from './Repertoire.json'
+import Headliners from './repertoire/RepertoireHeadliners.json'
+import Repertoire from './repertoire/Repertoire.json'
 import Header from '../Components/Header';
 import BandLogo from '../Components/BandLogo';
 import BackToMainPage from '../Components/BackToMainPage';

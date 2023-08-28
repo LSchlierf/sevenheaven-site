@@ -84,7 +84,7 @@
         "letter": "F",
         "songs": [
             {
-                "title": "Fürstenfeld",
+                "title": "F\u00fcrstenfeld",
                 "artist": "S.T.S"
             }
         ]
@@ -102,7 +102,7 @@
             },
             {
                 "title": "Griechischer Wein",
-                "artist": "Udo Jürgens"
+                "artist": "Udo J\u00fcrgens"
             }
         ]
     },
@@ -205,7 +205,7 @@
         "songs": [
             {
                 "title": "Ohne dich",
-                "artist": "Münchner Freiheit"
+                "artist": "M\u00fcnchner Freiheit"
             }
         ]
     },
@@ -253,7 +253,7 @@
             },
             {
                 "title": "Schrei nach Liebe",
-                "artist": "Die Ärzte"
+                "artist": "Die \u00c4rzte"
             },
             {
                 "title": "Seven nation army",
@@ -277,7 +277,7 @@
             },
             {
                 "title": "Sweet Caroline",
-                "artist": "DJ Ötzi"
+                "artist": "DJ \u00d6tzi"
             },
             {
                 "title": "Sweet home Chicago",
@@ -326,12 +326,12 @@
                 "artist": "Rainhard Fendrich"
             },
             {
-                "title": "Whatever it takes",
-                "artist": "Imagine Dragons"
-            },
-            {
                 "title": "What's up",
                 "artist": "4 Non Blondes"
+            },
+            {
+                "title": "Whatever it takes",
+                "artist": "Imagine Dragons"
             },
             {
                 "title": "Wonderwall",

@@ -75,6 +75,8 @@ function MainPage() {
       case 'ArrowRight':
         slideRight()
         break
+      default:
+        break
     }
   }
 

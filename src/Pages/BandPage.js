@@ -7,15 +7,7 @@ import ImageCard from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BackToMainPage from '../Components/BackToMainPage';
 
-function desktopPage() {
-  return mobilePage()
-  return (
-    <>
-    </>
-  )
-}
-
-function mobilePage() {
+function BandPage() {
   const isDesktop = isBrowser || isTablet
   const bgColor = 'rgba(0,0,0,0.5)'
   return (
@@ -54,18 +46,6 @@ function mobilePage() {
         <div style={{ paddingBottom: '10vh' }} />
         <PageFooter />
       </div>
-    </>
-  )
-}
-
-function BandPage() {
-  return (
-    <>
-      {(isBrowser || isTablet) ?
-        desktopPage()
-        :
-        mobilePage()
-      }
     </>
   )
 }

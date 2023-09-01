@@ -35,7 +35,7 @@ function desktopBar() {
           </div>
         </div>
         <div className='centerLogo'>
-          <img src='logo192.png' />
+          <img src='logo192.png' alt='bandlogo'/>
           <div className='centerLogoText'>
             <a href='/' style={{ textDecoration: 'none' }}>
               <BandLogo padding='0' fontSize='1.3vw' cursor='pointer'/>

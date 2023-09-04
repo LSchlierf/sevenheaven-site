@@ -47,11 +47,11 @@ bg img               -1
 
 /*
 TODO: 
-- burger menü fixed
-- Abstände checken
-- zurück mit location
-- Icons
-- Page footer kleiner
-- hintergrund bild scrollt hoch rot
-- hintergrund bild scrollt hoch schwarz
+- burger menü fixed                     [x]
+- Abstände checken                      [x]
+- zurück mit location                   [ ]
+- Icons                                 [x]
+- Page footer kleiner                   [x]
+- hintergrund bild scrollt hoch rot     [ ]
+- hintergrund bild scrollt hoch schwarz [x]
 */

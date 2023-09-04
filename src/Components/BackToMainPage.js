@@ -23,6 +23,11 @@ function BackToMainPage(props) {
       <div className='backText'>
         Zurück zur Startseite
       </div>
+      {
+        isDesktop ? (
+          <div style={{width: '50px'}} />
+        ) : (<></>)
+      }
     </a>
   )
 }

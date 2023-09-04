@@ -72,7 +72,7 @@ function RepertoirePage() {
     <>
       <TitleBar />
       <div className='bgImgContainer'>
-        <img src='bg/0.jpg' alt='background' />
+        <img src='bg/m0.jpg' alt='background' />
       </div>
       <div className='subPageContent'>
         <Header text='Repertoire' fontSize={isDesktop ? '250%' : '150%'} paddingBottom='0' />

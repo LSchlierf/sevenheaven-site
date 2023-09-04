@@ -14,7 +14,7 @@ function GalleryPage() {
     <>
       <TitleBar />
       <div className='bgImgContainer'>
-        <img src='bg/0.jpg' alt='background' />
+        <img src='bg/m0.jpg' alt='background' />
       </div>
       <div className='subPageContent'>
         <Header text='Galerie' fontSize={isDesktop ? '350%' : '200%'} paddingBottom='0' />
@@ -26,11 +26,18 @@ function GalleryPage() {
           <ImageCard text={<>Alles Neu<br />40 Jahre westpark - Juli 2023</>} fontSize='medium' version='video' />
           <ImageCard text={<>Timewarp<br />Musikalisches Weinfest - Mai 2023</>} fontSize='medium' version='video' />
         </div>
-        <Header text='Fotos' fontSize={isDesktop ? '200%' : '150%'} sub paddingBottom='5vw' />
-        <div className='contentContainer-3'>
-          <ImageCard text='40 Jahre Westpark' backgroundColor='darkred' fontSize='medium' />
-          <ImageCard text='Musikalisches Weinfest 2023' backgroundColor='darkred' fontSize='medium' />
-          <ImageCard text='JuHa Neuried 2023' backgroundColor='darkred' fontSize='medium' />
+        <div className='sectionWrapper'>
+          <div className='sectionContent'>
+            <Header text='Fotos' fontSize={isDesktop ? '200%' : '150%'} sub paddingBottom='5vw' />
+            <div className='contentContainer-3'>
+              <ImageCard text='40 Jahre Westpark' backgroundColor='darkred' fontSize='medium' />
+              <ImageCard text='Musikalisches Weinfest 2023' backgroundColor='darkred' fontSize='medium' />
+              <ImageCard text='JuHa Neuried 2023' backgroundColor='darkred' fontSize='medium' />
+            </div>
+          </div>
+          <div className='sectionImgContainer'>
+            <img src='bg/mbw.jpg' alt='background'/>
+          </div>
         </div>
         <Header text='Studio' fontSize={isDesktop ? '200%' : '150%'} sub paddingBottom='5vw' />
         <div className='audioWrapper'>

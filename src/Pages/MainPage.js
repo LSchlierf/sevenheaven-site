@@ -10,7 +10,7 @@ import PageFooter from '../Components/PageFooter';
 import BandLogo from '../Components/BandLogo';
 import Socials from '../Components/Socials';
 
-let imagesM = ['bg/2.jpeg', 'bg/0.jpg', 'bg/1.JPG']
+let imagesM = ['bg/m2.jpeg', 'bg/m0.jpg', 'bg/m1.JPG']
 
 function getImages(input, className) {
   return input.map((src, index) => <img className={className} id={'bg' + index} src={src} alt='background' key={index} />)
@@ -68,7 +68,7 @@ function MainPage() {
 
   document.onkeydown = (e) => {
     e = e || window.event
-    switch(e.code) {
+    switch (e.code) {
       case 'ArrowLeft':
         slideLeft()
         break
@@ -159,10 +159,10 @@ function MainPage() {
         }
       </div >
       <div className='scrollContent' >
-        <Header text='musik' id='musik' fontSize={isDesktop ? '400%' : '300%'} />
+        <Header text='musik' id='musik' fontSize={isDesktop ? '400%' : '300%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
         <div className='contentContainer'>
-          <ImageCard text={<>40-jähriges Westpark Jubiläum<br/>(Highlights)</>} />
-          <ImageCard text={<>Musikalisches Weinfest 2023<br/>(Hightlights)</>} />
+          <ImageCard text={<>40-jähriges Westpark Jubiläum<br />(Highlights)</>} />
+          <ImageCard text={<>Musikalisches Weinfest 2023<br />(Hightlights)</>} />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} >
@@ -177,18 +177,25 @@ function MainPage() {
             Eine Übersicht über unser Repertoire findest du <a href='/repertoire'>hier</a>.
           </div>
         </div>
-        <Header text='Angebot' id='angebot' fontSize={isDesktop ? '350%' : '200%'} />
-        <div className='contentContainer-3'>
-          <ImageCard text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor='darkred' />
-          <ImageCard text='Zu einer guten Hochzeit gehört Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor='darkred' />
-          <ImageCard text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor='darkred' />
-        </div>
-        <div className='textBoxWrapper'>
-          <div className='textBox' style={{ background: 'darkred', fontsize: 'large' }} >
-            Interesse? Kontaktiere uns gerne <a href='/kontakt'>hier</a>.
+        <div className='sectionWrapper'>
+          <div className='sectionContent'>
+            <Header text='Angebot' id='angebot' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
+            <div className='contentContainer-3'>
+              <ImageCard text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor='darkred' />
+              <ImageCard text='Zu einer guten Hochzeit gehört Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor='darkred' />
+              <ImageCard text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor='darkred' />
+            </div>
+            <div className='textBoxWrapper'>
+              <div className='textBox' style={{ background: 'darkred', fontsize: 'large' }} >
+                Interesse? Kontaktiere uns gerne <a href='/kontakt'>hier</a>.
+              </div>
+            </div>
+          </div>
+          <div className='sectionImgContainer'>
+            <img src='bg/mbw.jpg' alt='background'/>
           </div>
         </div>
-        <Header text='Über uns' id='wir' fontSize={isDesktop ? '350%' : '200%'} />
+        <Header text='Über uns' id='wir' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
         <div className='contentContainer'>
           <ImageCard text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' />
         </div>
@@ -197,7 +204,7 @@ function MainPage() {
             <a href='/wir'>Hier</a> erfährst du mehr über unsere einzelnen Bandmitglieder.
           </div>
         </div>
-        <Header text='Kontakt' id='kontakt' fontSize={isDesktop ? '350%' : '200%'} />
+        <Header text='Kontakt' id='kontakt' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
         <div className='textBoxWrapper'>
           <a href='/kontakt' className='textBox' style={{ background: 'darkred', fontSize: 'large' }} >
             Schreibe uns eine Nachricht!

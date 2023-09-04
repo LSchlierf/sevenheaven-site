@@ -16,6 +16,7 @@
         width: 40%;
         left: 30%;
         right: 30%;
+        justify-content: space-around;
     }
 }
 

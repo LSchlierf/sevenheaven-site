@@ -1,5 +1,3 @@
-
-
 .socials {
     display: flex;
     justify-content: center;
@@ -37,4 +35,29 @@
     width: 20vw;
     height: 20vw;
     border-radius: 5vw;
+}
+
+@media only screen and (min-width: 768px) {
+    .socialContainer {
+        padding-bottom: 30px;
+    }
+
+    .icon {
+        width: 150px;
+        height: 150px;
+        border-radius: 30px;
+        padding: 30px;
+    }
+
+    #insta {
+        font-size: 30px;
+    }
+
+    #mail {
+        font-size: 20px;
+    }
+
+    #mail > .iconContainer > .icon {
+        padding-bottom: 5px;
+    }
 }

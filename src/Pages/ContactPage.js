@@ -47,6 +47,7 @@ function ContactPage() {
     }
     mailInput.value = ''
     mesgInput.value = ''
+    setForm(waitingTemplate)
     sendMail({ mail: mail, mesg: mesg })
   }
 
@@ -73,6 +74,23 @@ function ContactPage() {
     </form>
   )
 
+  const waitingTemplate = (
+    <div className='contactForm'>
+      <div className='contactSuccess'>
+        <div className='loadingAnimation'>
+          <div className='loadingCircleWrapper'><div className='loadingCircle'/></div>
+          <div className='loadingCircleWrapper'><div className='loadingCircle'/></div>
+          <div className='loadingCircleWrapper'><div className='loadingCircle'/></div>
+          <div className='loadingCircleWrapper'><div className='loadingCircle'/></div>
+          <div className='loadingCircleWrapper'><div className='loadingCircle'/></div>
+          <div className='loadingCircleWrapper'><div className='loadingCircle'/></div>
+          <div className='loadingCircleWrapper'><div className='loadingCircle'/></div>
+          <div className='loadingCircleWrapper'><div className='loadingCircle'/></div>
+        </div>
+      </div>
+    </div>
+  )
+
   const successTemplate = (
     <div className='contactForm'>
       <div className='contactSuccess'>
@@ -87,14 +105,14 @@ function ContactPage() {
 
   const errorTemplate = (
     <div className='contactForm'>
-        <div className='contactSuccess'>
-          <div className='successText'>
-            Das hat leider nicht geklappt.
-            <br /><br />
-            Versuch es doch später nochmal, oder probiere einen unserer anderen Kanäle.
-          </div>
+      <div className='contactSuccess'>
+        <div className='successText'>
+          Das hat leider nicht geklappt.
+          <br /><br />
+          Versuch es doch später nochmal, oder probiere einen unserer anderen Kanäle.
         </div>
       </div>
+    </div>
   )
 
   const isDesktop = isBrowser || isTablet
@@ -104,7 +122,7 @@ function ContactPage() {
     <>
       <TitleBar />
       <div className='bgImgContainer'>
-        <img src='bg/0.jpg' alt='background' />
+        <img src='bg/m0.jpg' alt='background' />
       </div>
       <div className='subPageContent'>
         <Header text='Kontakt' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />
@@ -115,7 +133,7 @@ function ContactPage() {
         </div>
         <Socials />
         <BackToMainPage />
-        <div style={{paddingBottom: '30px'}} />
+        <div style={{ paddingBottom: '30px' }} />
         <PageFooter />
       </div>
     </>

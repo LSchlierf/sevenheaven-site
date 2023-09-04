@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: -1;
+    z-index: -3;
 }
 
 .imgCyclerM > img {
@@ -261,6 +261,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .textBoxWrapper {
+        padding-bottom: 100px;
+    }
+
     .textBox {
         width: 40vw;
     }

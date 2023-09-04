@@ -68,4 +68,8 @@
         padding-right: 2%;
         padding-bottom: 4%;
     }
+
+    .imageCardWrapperWrapper {
+        padding-bottom: 60px;
+    }
 }

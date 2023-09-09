@@ -38,8 +38,19 @@ input[type=text], textarea {
     border: none;
 }
 
-.invalid {
-    background-color: rgb(255, 128, 128);
+.contactMailWrapper {
+    position: relative;
+}
+
+.contactMailIconWrapper {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 textarea {

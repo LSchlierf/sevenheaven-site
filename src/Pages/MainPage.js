@@ -128,7 +128,10 @@ function MainPage() {
               <img src='logo192.png' alt='Bandlogo' />
             </div>
             <div className='menuItem'>
-              <BandLogo text='Home' fontSize='6vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={toggleBurger} />
+              <BandLogo text='Home' fontSize='6vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => {
+                toggleBurger()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }} />
             </div>
             <div className='menuItem'>
               <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('musik')} />

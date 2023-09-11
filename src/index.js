@@ -41,7 +41,8 @@ title bar             3
 burger open           2
 left right anfragen   1
 Main content          0
-bg img               -1
+bg img cycler        -3
+bg img static        -5
 */
 
 
@@ -52,6 +53,6 @@ TODO:
 - zurück mit location                   [ ]
 - Icons                                 [x]
 - Page footer kleiner                   [x]
-- hintergrund bild scrollt hoch rot     [ ]
+- hintergrund bild scrollt hoch rot     [x]
 - hintergrund bild scrollt hoch schwarz [x]
 */

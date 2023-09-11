@@ -1,21 +1,43 @@
-.imgCyclerM {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    /* align-items: start; */
+.imgCyclerM, .cyclerBgImgContainer {
     width: 100vw;
     height: 100vh;
     position: fixed;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.imgCyclerM {
     z-index: -3;
 }
 
-.imgCyclerM > img {
+.cyclerBgImgContainer {
+    z-index: -5;
+}
+
+.imgCyclerM > img, .cyclerBgImg {
     filter: blur(calc(var(--scrolled) * 10px));
     flex-shrink: 0;
     width: calc(100vw + ((1 - var(--scrolled)) * 10vw));
     height: calc(100vh + ((1 - var(--scrolled)) * 10vh));
     z-index: inherit;
     object-fit: cover;
+}
+
+.imgCyclerM > img {
+    opacity: calc(1 - var(--scrolled));
+}
+
+.cyclerBgImg {
+    opacity: 1;
+}
+
+/* img cycler sliding animations */
+
+@media (prefers-reduced-motion: no-preference) {
+    .animate-to-left{position:relative;animation:animatetoleft 0.4s}@keyframes animatetoleft{from{transform: translateX(-100%);} to{transform: translateX(0%);}}
+    .animate-to-right{position:relative;animation:animatetoright 0.4s}@keyframes animatetoright{from{transform:translateX(100%);} to{transform:translateX(0%);}}
 }
 
 .landingContent {
@@ -75,6 +97,8 @@
     height: 3px;
     position: relative;
 }
+
+/* first state for burgers */
 
 .burgerLine:nth-child(1) {
     top: 0%;
@@ -278,9 +302,4 @@ div[class^='contentContainer'] {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .animate-to-left{position:relative;animation:animatetoleft 0.4s}@keyframes animatetoleft{from{transform: translateX(-100%);} to{transform: translateX(0%);}}
-    .animate-to-right{position:relative;animation:animatetoright 0.4s}@keyframes animatetoright{from{transform:translateX(100%);} to{transform:translateX(0%);}}
 }

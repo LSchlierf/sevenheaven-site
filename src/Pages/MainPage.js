@@ -11,6 +11,7 @@ import BandLogo from '../Components/BandLogo';
 import Socials from '../Components/Socials';
 
 let imagesM = ['bg/m2.jpeg', 'bg/m0.jpg', 'bg/m1.JPG']
+let staticBg = 'bg/m0.jpg'
 
 function getImages(input, className) {
   return input.map((src, index) => <img className={className} id={'bg' + index} src={src} alt='background' key={index} />)
@@ -94,6 +95,9 @@ function MainPage() {
   return (
     <>
       <TitleBar />
+      <div className='cyclerBgImgContainer'>
+        <img className='cyclerBgImg' src={staticBg} />
+      </div>
       <div className='imgCyclerM'>
         {img}
       </div>
@@ -195,7 +199,7 @@ function MainPage() {
             </div>
           </div>
           <div className='sectionImgContainer'>
-            <img src='bg/mbw.jpg' alt='background'/>
+            <img src='bg/mbw.jpg' alt='background' />
           </div>
         </div>
         <Header text='Über uns' id='wir' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />

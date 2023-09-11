@@ -2,16 +2,17 @@ import React from 'react';
 import { isBrowser, isTablet, } from 'react-device-detect'
 import './TitleBar.css'
 import BandLogo from './BandLogo';
+import { useNavigate } from 'react-router-dom';
 
-function desktopBar() {
+function desktopBar(navigate) {
   function scrollTo(id) {
     if(window.location.pathname === '/') {
       const element = document.getElementById(id)
-      // const titleBar = document.getElementsByClassName('mobileBar')[0]
-      // const offset = 80 - titleBar.getBoundingClientRect().bottom
-      const offset = 0
+      const offset = -0
       const y = element.getBoundingClientRect().top + window.scrollY + offset
       window.scrollTo({ top: y, behavior: 'smooth' })
+    } else {
+      navigate('/', {state: {location: id}})
     }
   }
 
@@ -20,7 +21,7 @@ function desktopBar() {
       <div className='desktopBar'>
         <div className='navContainer'>
           <div className='navLogo'>
-            <BandLogo padding='0' text='Musik' fontSize='1.3vw' onClick={() => scrollTo('musik')} />
+            <BandLogo padding='0' text='Musik' fontSize='1.3vw' onClick={() => scrollTo('musik')} cursor='pointer' />
             <a href='/galerie' style={{ textDecoration: 'none' }}>
               <BandLogo padding='5px' text='Galerie' fontSize='0.8vw' cursor='pointer' />
             </a>
@@ -31,7 +32,7 @@ function desktopBar() {
         </div>
         <div className='navContainer'>
           <div className='navLogo'>
-            <BandLogo padding='0' text='Angebot' fontSize='1.3vw' onClick={() => scrollTo('angebot')} />
+            <BandLogo padding='0' text='Angebot' fontSize='1.3vw' onClick={() => scrollTo('angebot')} cursor='pointer' />
           </div>
         </div>
         <div className='centerLogo'>
@@ -44,7 +45,7 @@ function desktopBar() {
         </div>
         <div className='navContainer'>
           <div className='navLogo'>
-            <BandLogo padding='0' text='Über uns' fontSize='1.3vw' onClick={() => scrollTo('wir')} />
+            <BandLogo padding='0' text='Über uns' fontSize='1.3vw' onClick={() => scrollTo('wir')} cursor='pointer' />
             <a href='/wir' style={{ textDecoration: 'none' }}>
               <BandLogo padding='5px' text='Die Band' fontSize='0.8vw' cursor='pointer' />
             </a>
@@ -52,7 +53,7 @@ function desktopBar() {
         </div>
         <div className='navContainer'>
           <div className='navLogo'>
-            <BandLogo padding='0' text='Kontakt' fontSize='1.3vw' onClick={() => scrollTo('kontakt')} />
+            <BandLogo padding='0' text='Kontakt' fontSize='1.3vw' onClick={() => scrollTo('kontakt')} cursor='pointer' />
             <a href='/kontakt' style={{ textDecoration: 'none' }}>
               <BandLogo padding='5px' text='Kontaktformular' fontSize='0.8vw' cursor='pointer' />
             </a>
@@ -76,10 +77,11 @@ function mobileBar() {
 }
 
 function TitleBar() {
+  let navigate = useNavigate()
   return (
     <>
       {(isBrowser || isTablet) ?
-        desktopBar()
+        desktopBar(navigate)
         :
         mobileBar()
       }

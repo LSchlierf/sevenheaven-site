@@ -1,5 +1,5 @@
 import { isBrowser, isTablet, } from 'react-device-detect'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './MainPage.css'
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { IconContext } from 'react-icons/lib';
@@ -9,6 +9,7 @@ import ImageCard from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BandLogo from '../Components/BandLogo';
 import Socials from '../Components/Socials';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 let imagesM = ['bg/m2.jpeg', 'bg/m0.jpg', 'bg/m1.JPG']
 let staticBg = 'bg/m0.jpg'
@@ -20,6 +21,8 @@ function getImages(input, className) {
 function MainPage() {
   const [img, setImg] = useState(getImages(imagesM, 'bg'))
   const [menu, setMenu] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   function slideLeft() {
     const list = document.getElementsByClassName('bg')
@@ -81,7 +84,9 @@ function MainPage() {
     }
   }
 
-  function scrollTo(id) {
+  const isDesktop = isBrowser || isTablet
+
+  function scrollToM(id) {
     toggleBurger()
     const element = document.getElementById(id)
     const titleBar = document.getElementsByClassName('mobileBar')[0]
@@ -90,7 +95,23 @@ function MainPage() {
     window.scrollTo({ top: y, behavior: 'smooth' })
   }
 
-  const isDesktop = isBrowser || isTablet
+  function scrollToD(id) {
+    const element = document.getElementById(id)
+    const offset = -0
+    const y = element.getBoundingClientRect().top + window.scrollY + offset
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    if (location.state?.location) {
+      if (isDesktop) {
+        scrollToD(location.state.location)
+      } else {
+        scrollToM(location.state.location)
+      }
+      navigate(location.pathname, { replace: true })
+    }
+  }, [])
 
   return (
     <>
@@ -138,7 +159,7 @@ function MainPage() {
               }} />
             </div>
             <div className='menuItem'>
-              <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('musik')} />
+              <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollToM('musik')} />
               <a href='/galerie' style={{ textDecoration: 'none' }}>
                 <BandLogo text='Galerie' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>
@@ -147,16 +168,16 @@ function MainPage() {
               </a>
             </div>
             <div className='menuItem'>
-              <BandLogo text='Angebot' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('angebot')} />
+              <BandLogo text='Angebot' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollToM('angebot')} />
             </div>
             <div className='menuItem'>
-              <BandLogo text='Über uns' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('wir')} />
+              <BandLogo text='Über uns' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollToM('wir')} />
               <a href='/wir' style={{ textDecoration: 'none' }}>
                 <BandLogo text='Die Band' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>
             </div>
             <div className='menuItem'>
-              <BandLogo text='Kontakt' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollTo('kontakt')} />
+              <BandLogo text='Kontakt' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollToM('kontakt')} />
               <a href='/kontakt' style={{ textDecoration: 'none' }}>
                 <BandLogo text='Kontaktformular' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>

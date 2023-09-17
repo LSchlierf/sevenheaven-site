@@ -30,12 +30,16 @@
     font-size: x-large;
 }
 
-input[type=text], textarea {
+input[type=email], textarea {
     width: 100%;
     padding: 15px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     border: none;
+}
+
+textarea {
+    resize: none;
 }
 
 .contactMailWrapper {

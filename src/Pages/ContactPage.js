@@ -74,7 +74,7 @@ function ContactPage() {
   const formTemplate = (
     <form className='contactForm' onSubmit={(event) => { event.preventDefault(); submit() }}>
       <div className='contactMailWrapper'>
-        <input type='text' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} />
+        <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} />
         <div className='contactMailIconWrapper'>
         </div>
       </div>
@@ -90,7 +90,7 @@ function ContactPage() {
   const formTemplateValid = (
     <form className='contactForm' onSubmit={(event) => { event.preventDefault(); submit() }}>
       <div className='contactMailWrapper'>
-        <input type='text' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail}/>
+        <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail}/>
         <div className='contactMailIconWrapper'>
           <IconContext.Provider value={{ size: 30, color: 'green' }}>
             <BsFillCheckCircleFill />
@@ -109,7 +109,7 @@ function ContactPage() {
   const formTemplateInvalid = (
     <form className='contactForm' onSubmit={(event) => { event.preventDefault(); submit() }}>
       <div className='contactMailWrapper'>
-        <input type='text' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail} />
+        <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail} />
         <div className='contactMailIconWrapper'>
           <IconContext.Provider value={{ size: 30, color: 'red' }}>
             <BsFillXCircleFill />

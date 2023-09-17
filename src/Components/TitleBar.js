@@ -65,10 +65,10 @@ function desktopBar(navigate) {
   )
 }
 
-function mobileBar() {
+function mobileBar(navigate) {
   return (
     <div className='mobileBar'>
-      <BandLogo fontSize='8vw' />
+      <BandLogo fontSize='8vw' cursor='pointer' onClick={() => navigate('/')} />
       <div className='imgContainer'>
         <img src='Logo.png' alt='Bandlogo' />
       </div>
@@ -83,7 +83,7 @@ function TitleBar() {
       {(isBrowser || isTablet) ?
         desktopBar(navigate)
         :
-        mobileBar()
+        mobileBar(navigate)
       }
     </>
   )

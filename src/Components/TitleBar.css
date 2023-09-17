@@ -12,6 +12,10 @@
     z-index: 2;
 }
 
+.mobileBar > .imgContainer {
+    cursor: pointer;
+}
+
 .imgContainer > img {
     height: calc(20vw - (var(--scrolled) * 12vw));
 }

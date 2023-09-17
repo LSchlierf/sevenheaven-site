@@ -70,7 +70,7 @@ function mobileBar(navigate) {
     <div className='mobileBar'>
       <BandLogo fontSize='8vw' cursor='pointer' onClick={() => navigate('/')} />
       <div className='imgContainer'>
-        <img src='Logo.png' alt='Bandlogo' />
+        <img src='Logo.png' alt='Bandlogo' onClick={() => navigate('/')} />
       </div>
     </div>
   )

@@ -1,0 +1,9 @@
+{
+    "staticBg" : "bg/bg.jpg",
+    "staticBgBW" : "bg/bw.jpg",
+    "cyclerM" : [
+        "bg/m2.jpeg",
+        "bg/m0.jpg",
+        "bg/m1.JPG"
+    ]
+}

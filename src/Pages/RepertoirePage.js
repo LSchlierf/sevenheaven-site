@@ -10,6 +10,7 @@ import BackToMainPage from '../Components/BackToMainPage';
 import PageFooter from '../Components/PageFooter';
 import { BsChevronDown } from "react-icons/bs";
 import { IconContext } from 'react-icons';
+import constants from './Constants.json'
 const isDesktop = isBrowser || isTablet
 
 function RepertoireCard(title, songs, index) {
@@ -72,7 +73,7 @@ function RepertoirePage() {
     <>
       <TitleBar />
       <div className='bgImgContainer'>
-        <img src='bg/m0.jpg' alt='background' />
+        <img src={constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
         <Header text='Repertoire' fontSize={isDesktop ? '250%' : '150%'} paddingBottom='0' />
@@ -81,7 +82,7 @@ function RepertoirePage() {
             Headliners.map((item, index) => RepertoireCard(item.title, item.songs, index))
           }
         </div>
-        <div style={{ padding: '3vw' }} />
+        <div style={{ padding: '0px' }} />
         <div className='moreRepertoire' onClick={gotoRepertoire}>
           <IconContext.Provider value={{ color: 'white', size: 40 }}>
             <BsChevronDown />

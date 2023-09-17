@@ -7,6 +7,7 @@ import ImageCard from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BackToMainPage from '../Components/BackToMainPage';
 import AudioPlayer from '../Components/AudioPlayer';
+import constants from './Constants.json'
 
 function GalleryPage() {
   const isDesktop = isBrowser || isTablet
@@ -14,7 +15,7 @@ function GalleryPage() {
     <>
       <TitleBar />
       <div className='bgImgContainer'>
-        <img src='bg/m0.jpg' alt='background' />
+        <img src={constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
         <Header text='Galerie' fontSize={isDesktop ? '350%' : '200%'} paddingBottom='0' />
@@ -36,7 +37,7 @@ function GalleryPage() {
             </div>
           </div>
           <div className='sectionImgContainer'>
-            <img src='bg/mbw.jpg' alt='background'/>
+            <img src={constants.staticBgBW} alt='background'/>
           </div>
         </div>
         <Header text='Studio' fontSize={isDesktop ? '200%' : '150%'} sub paddingBottom='5vw' />

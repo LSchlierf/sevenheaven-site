@@ -6,6 +6,7 @@ import Header from '../Components/Header';
 import ImageCard from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BackToMainPage from '../Components/BackToMainPage';
+import constants from './Constants.json'
 
 function BandPage() {
   const isDesktop = isBrowser || isTablet
@@ -14,7 +15,7 @@ function BandPage() {
     <>
       <TitleBar />
       <div className='bgImgContainer'>
-        <img src='bg/m0.jpg' alt='background' />
+        <img src={constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
         <Header text='Die Band' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />

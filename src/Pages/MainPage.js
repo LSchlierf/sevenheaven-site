@@ -10,16 +10,15 @@ import PageFooter from '../Components/PageFooter';
 import BandLogo from '../Components/BandLogo';
 import Socials from '../Components/Socials';
 import { useLocation, useNavigate } from 'react-router-dom';
-
-let imagesM = ['bg/m2.jpeg', 'bg/m0.jpg', 'bg/m1.JPG']
-let staticBg = 'bg/m0.jpg'
+import constants from './Constants.json'
 
 function getImages(input, className) {
   return input.map((src, index) => <img className={className} id={'bg' + index} src={src} alt='background' key={index} />)
 }
 
 function MainPage() {
-  const [img, setImg] = useState(getImages(imagesM, 'bg'))
+  const isDesktop = isBrowser || isTablet
+  const [img, setImg] = useState(getImages(constants.cyclerM, 'bg'))
   const [menu, setMenu] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
@@ -84,8 +83,6 @@ function MainPage() {
     }
   }
 
-  const isDesktop = isBrowser || isTablet
-
   function scrollToM(id) {
     toggleBurger()
     const element = document.getElementById(id)
@@ -111,13 +108,14 @@ function MainPage() {
       }
       navigate(location.pathname, { replace: true })
     }
+  // eslint-disable-next-line
   }, [])
 
   return (
     <>
       <TitleBar />
       <div className='cyclerBgImgContainer'>
-        <img className='cyclerBgImg' src={staticBg} />
+        <img className='cyclerBgImg' src={constants.staticBg} alt='background' />
       </div>
       <div className='imgCyclerM'>
         {img}
@@ -220,7 +218,7 @@ function MainPage() {
             </div>
           </div>
           <div className='sectionImgContainer'>
-            <img src='bg/mbw.jpg' alt='background' />
+            <img src={constants.staticBgBW} alt='background' />
           </div>
         </div>
         <Header text='Über uns' id='wir' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />

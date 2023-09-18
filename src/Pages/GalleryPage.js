@@ -3,7 +3,7 @@ import { isBrowser, isTablet, } from 'react-device-detect'
 import './GalleryPage.css'
 import TitleBar from '../Components/TitleBar';
 import Header from '../Components/Header';
-import ImageCard from '../Components/ImageCard';
+import { ImageCard, VideoCard } from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BackToMainPage from '../Components/BackToMainPage';
 import AudioPlayer from '../Components/AudioPlayer';
@@ -21,11 +21,11 @@ function GalleryPage() {
         <Header text='Galerie' fontSize={isDesktop ? '350%' : '200%'} paddingBottom='0' />
         <Header text='Videos' fontSize={isDesktop ? '200%' : '150%'} sub paddingBottom='5vw' />
         <div className='contentContainer-3'>
-          <ImageCard text={<>Major Tom<br />JuHa Neuried - März 2023</>} fontSize='medium' version='video' vid='https://www.youtube.com/embed/dQw4w9WgXcQ?si=xWIxTEDuoBNsi3nL' />
-          <ImageCard text={<>Disney Medley<br />40 Jahre Westpark - Juli 2023</>} fontSize='medium' version='video' vid='https://www.youtube.com/embed/wpV-gGA4PSk?si=9QYx_u2Yh5CwOTVh' />
-          <ImageCard text={<>Irgendwie, Irgendwo, Irgendwann<br />Musikalisches Weinfest - Mai 2023</>} fontSize='medium' version='video' />
-          <ImageCard text={<>Alles Neu<br />40 Jahre westpark - Juli 2023</>} fontSize='medium' version='video' />
-          <ImageCard text={<>Timewarp<br />Musikalisches Weinfest - Mai 2023</>} fontSize='medium' version='video' />
+          <VideoCard text={<>Major Tom<br />JuHa Neuried - März 2023</>} thumbnail='bg/bw.jpg' fontSize='medium' domain='YouTube' vid='https://www.youtube.com/embed/dQw4w9WgXcQ?si=xWIxTEDuoBNsi3nL' />
+          <VideoCard text={<>Disney Medley<br />40 Jahre Westpark - Juli 2023</>} thumbnail='bg/bw.jpg' fontSize='medium' domain='YouTube' vid='https://www.youtube.com/embed/wpV-gGA4PSk?si=9QYx_u2Yh5CwOTVh' />
+          <VideoCard text={<>Irgendwie, Irgendwo, Irgendwann<br />Musikalisches Weinfest - Mai 2023</>} thumbnail='bg/bw.jpg' fontSize='medium' domain='YouTube' />
+          <VideoCard text={<>Alles Neu<br />40 Jahre westpark - Juli 2023</>} thumbnail='bg/bw.jpg' fontSize='medium' domain='YouTube' />
+          <VideoCard text={<>Timewarp<br />Musikalisches Weinfest - Mai 2023</>} thumbnail='bg/bw.jpg' fontSize='medium' domain='YouTube' />
         </div>
         <div className='sectionWrapper'>
           <div className='sectionContent'>

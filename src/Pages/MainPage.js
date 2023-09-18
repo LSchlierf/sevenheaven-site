@@ -5,7 +5,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { IconContext } from 'react-icons/lib';
 import TitleBar from '../Components/TitleBar';
 import Header from '../Components/Header';
-import ImageCard from '../Components/ImageCard';
+import { ImageCard } from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BandLogo from '../Components/BandLogo';
 import Socials from '../Components/Socials';

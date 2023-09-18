@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { isBrowser, isTablet, } from 'react-device-detect'
 import { BsFillCheckCircleFill, BsFillXCircleFill } from 'react-icons/bs';
 import './ContactPage.css'
@@ -9,11 +9,22 @@ import Socials from '../Components/Socials';
 import BackToMainPage from '../Components/BackToMainPage'
 import { IconContext } from 'react-icons/lib';
 import constants from './Constants.json'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line
 const mailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
 
 function ContactPage() {
+  const location = useLocation()
+  const navigate = useNavigate()
+  useEffect(() => {
+    if (location.state?.location) {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+      navigate(location.pathname, { replace: true, state: { retLocation: location.state.location } })
+    }
+    // eslint-disable-next-line
+  }, [])
+
   function handleServerReply(reply) {
     if (!reply || reply['status'] !== 'success') {
       setForm(errorTemplate)
@@ -90,7 +101,7 @@ function ContactPage() {
   const formTemplateValid = (
     <form className='contactForm' onSubmit={(event) => { event.preventDefault(); submit() }}>
       <div className='contactMailWrapper'>
-        <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail}/>
+        <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail} />
         <div className='contactMailIconWrapper'>
           <IconContext.Provider value={{ size: 30, color: 'green' }}>
             <BsFillCheckCircleFill />
@@ -183,7 +194,7 @@ function ContactPage() {
           Du erreichst uns auch über andere Kanäle.
         </div>
         <Socials />
-        <BackToMainPage />
+        <BackToMainPage retLocation={location.state?.retLocation} />
         <div style={{ paddingBottom: '30px' }} />
         <PageFooter />
       </div>

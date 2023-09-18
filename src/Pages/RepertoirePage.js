@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { isBrowser, isTablet, } from 'react-device-detect'
 import './RepertoirePage.css'
 import TitleBar from '../Components/TitleBar';
@@ -11,6 +11,7 @@ import PageFooter from '../Components/PageFooter';
 import { BsChevronDown } from "react-icons/bs";
 import { IconContext } from 'react-icons';
 import constants from './Constants.json'
+import { useLocation, useNavigate } from 'react-router-dom';
 const isDesktop = isBrowser || isTablet
 
 function RepertoireCard(title, songs, index) {
@@ -42,7 +43,7 @@ function RepertoireItem(item, index) {
   return (
     <div className='repertoireItem' key={index}>
       <div className='repertoireLetter'>
-        <BandLogo noCenter={noCenter} text={item.letter} backgroundColor='rgba(0,0,0,0)' padding='0' fontSize={isDesktop ? '500%' : '300%'}/>
+        <BandLogo noCenter={noCenter} text={item.letter} backgroundColor='rgba(0,0,0,0)' padding='0' fontSize={isDesktop ? '500%' : '300%'} />
       </div>
       <div className='repertoireSongs'>
         {item.songs.map((item, index) => {
@@ -60,7 +61,7 @@ function RepertoireItem(item, index) {
 function gotoRepertoire() {
   const element = document.getElementsByClassName('repertoire')[0]
   let offset = 0
-  if (!isDesktop){
+  if (!isDesktop) {
     const titleBar = document.getElementsByClassName('mobileBar')[0]
     offset = 30 - titleBar.getBoundingClientRect().bottom
   }
@@ -69,6 +70,15 @@ function gotoRepertoire() {
 }
 
 function RepertoirePage() {
+  const location = useLocation()
+  const navigate = useNavigate()
+  useEffect(() => {
+    if (location.state?.location) {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+      navigate(location.pathname, { replace: true, state: { retLocation: location.state.location } })
+    }
+    // eslint-disable-next-line
+  }, [])
   return (
     <>
       <TitleBar />
@@ -93,14 +103,14 @@ function RepertoirePage() {
           </IconContext.Provider>
         </div>
         <div style={{ padding: '3vw' }} />
-        <BackToMainPage backgroundColor='darkred'/>
+        <BackToMainPage backgroundColor='darkred' retLocation={location.state?.retLocation} />
         <div className='repertoire'>
           {
             Repertoire.map(RepertoireItem)
           }
         </div>
         <div style={{ padding: '3vw' }} />
-        <BackToMainPage />
+        <BackToMainPage retLocation={location.state?.retLocation} />
         <div style={{ padding: '3vw' }} />
         <PageFooter />
       </div>

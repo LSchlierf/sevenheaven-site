@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { isBrowser, isTablet, } from 'react-device-detect'
 import './GalleryPage.css'
 import TitleBar from '../Components/TitleBar';
@@ -8,9 +8,19 @@ import PageFooter from '../Components/PageFooter';
 import BackToMainPage from '../Components/BackToMainPage';
 import AudioPlayer from '../Components/AudioPlayer';
 import constants from './Constants.json'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function GalleryPage() {
   const isDesktop = isBrowser || isTablet
+  const location = useLocation()
+  const navigate = useNavigate()
+  useEffect(() => {
+    if (location.state?.location) {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+      navigate(location.pathname, { replace: true, state: { retLocation: location.state.location } })
+    }
+    // eslint-disable-next-line
+  }, [])
   return (
     <>
       <TitleBar />
@@ -37,14 +47,14 @@ function GalleryPage() {
             </div>
           </div>
           <div className='sectionImgContainer'>
-            <img src={constants.staticBgBW} alt='background'/>
+            <img src={constants.staticBgBW} alt='background' />
           </div>
         </div>
         <Header text='Studio' fontSize={isDesktop ? '200%' : '150%'} sub paddingBottom='5vw' />
         <div className='audioWrapper'>
           <AudioPlayer title="Don't stop believing" src='audio/dontstopbelieving.mp3' />
         </div>
-        <BackToMainPage />
+        <BackToMainPage retLocation={location.state?.retLocation} />
         <div style={{ paddingBottom: '10vh' }} />
         <PageFooter />
       </div>

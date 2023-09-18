@@ -9,7 +9,7 @@ import { ImageCard } from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BandLogo from '../Components/BandLogo';
 import Socials from '../Components/Socials';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import constants from './Constants.json'
 
 function getImages(input, className) {
@@ -107,9 +107,19 @@ function MainPage() {
         scrollToM(location.state.location)
       }
       navigate(location.pathname, { replace: true })
+    } else {
+      window.scrollTo({top: 0, behavior: 'instant'})
     }
   // eslint-disable-next-line
   }, [])
+
+  function stickyLink(text, href,id) {
+    return (
+      <Link to={href} state={{location: id}}>
+        {text}
+      </Link>
+    )
+  }
 
   return (
     <>
@@ -192,7 +202,7 @@ function MainPage() {
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} >
-            Willst du noch mehr von uns sehen? <a href='/galerie'>Hier</a> sind weitere Videos und Fotos.
+            Willst du noch mehr von uns sehen? {stickyLink('Hier', '/galerie', 'musik')} sind weitere Videos und Fotos.
           </div>
         </div>
         <div className='contentContainer'>
@@ -200,7 +210,7 @@ function MainPage() {
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} >
-            Eine Übersicht über unser Repertoire findest du <a href='/repertoire'>hier</a>.
+            Eine Übersicht über unser Repertoire findest du {stickyLink('hier', '/repertoire', 'musik')}.
           </div>
         </div>
         <div className='sectionWrapper'>
@@ -213,7 +223,7 @@ function MainPage() {
             </div>
             <div className='textBoxWrapper'>
               <div className='textBox' style={{ background: 'darkred', fontsize: 'large' }} >
-                Interesse? Kontaktiere uns gerne <a href='/kontakt'>hier</a>.
+                Interesse? Kontaktiere uns gerne {stickyLink('hier', '/kontakt', 'angebot')}.
               </div>
             </div>
           </div>
@@ -227,14 +237,14 @@ function MainPage() {
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} >
-            <a href='/wir'>Hier</a> erfährst du mehr über unsere einzelnen Bandmitglieder.
+            {stickyLink('Hier', '/wir', 'wir')} erfährst du mehr über unsere einzelnen Bandmitglieder.
           </div>
         </div>
         <Header text='Kontakt' id='kontakt' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
         <div className='textBoxWrapper'>
-          <a href='/kontakt' className='textBox' style={{ background: 'darkred', fontSize: 'large' }} >
-            Schreibe uns eine Nachricht!
-          </a>
+          <div className='textBox' style={{ background: 'darkred', fontSize: 'large' }} >
+            {stickyLink('Schreibe uns eine Nachricht!', '/kontakt', 'kontakt')}
+          </div>
         </div>
         <Socials />
         <PageFooter />

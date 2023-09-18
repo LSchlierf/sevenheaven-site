@@ -84,7 +84,6 @@ function MainPage() {
   }
 
   function scrollToM(id) {
-    toggleBurger()
     const element = document.getElementById(id)
     const titleBar = document.getElementsByClassName('mobileBar')[0]
     const offset = 80 - titleBar.getBoundingClientRect().bottom
@@ -108,14 +107,14 @@ function MainPage() {
       }
       navigate(location.pathname, { replace: true })
     } else {
-      window.scrollTo({top: 0, behavior: 'instant'})
+      window.scrollTo({ top: 0, behavior: 'instant' })
     }
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [])
 
-  function stickyLink(text, href,id) {
+  function stickyLink(text, href, id) {
     return (
-      <Link to={href} state={{location: id}}>
+      <Link to={href} state={{ location: id }}>
         {text}
       </Link>
     )
@@ -167,7 +166,7 @@ function MainPage() {
               }} />
             </div>
             <div className='menuItem'>
-              <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollToM('musik')} />
+              <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollToM('musik') }} />
               <a href='/galerie' style={{ textDecoration: 'none' }}>
                 <BandLogo text='Galerie' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>
@@ -176,16 +175,16 @@ function MainPage() {
               </a>
             </div>
             <div className='menuItem'>
-              <BandLogo text='Angebot' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollToM('angebot')} />
+              <BandLogo text='Angebot' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollToM('angebot') }} />
             </div>
             <div className='menuItem'>
-              <BandLogo text='Über uns' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollToM('wir')} />
+              <BandLogo text='Über uns' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollToM('wir') }} />
               <a href='/wir' style={{ textDecoration: 'none' }}>
                 <BandLogo text='Die Band' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>
             </div>
             <div className='menuItem'>
-              <BandLogo text='Kontakt' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => scrollToM('kontakt')} />
+              <BandLogo text='Kontakt' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollToM('kontakt') }} />
               <a href='/kontakt' style={{ textDecoration: 'none' }}>
                 <BandLogo text='Kontaktformular' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
               </a>

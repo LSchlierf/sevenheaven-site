@@ -1,12 +1,16 @@
 import json
 import string
 
-with open("Repertoire.txt", "r") as f:
+with open("Repertoire.txt", "r+") as f:
     repertoire = f.readlines()
     # sort the list
     repertoire.sort()
     # remove duplicates
     repertoire = list(dict.fromkeys(repertoire))
+    #write back sorted list
+    f.seek(0)
+    f.writelines(repertoire)
+    f.truncate()
     #initialize the dict for letter mapping
     letters = {}
     for i in string.ascii_uppercase:

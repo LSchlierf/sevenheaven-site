@@ -82,102 +82,92 @@ function ContactPage() {
     checkMail()
   }
 
-  const formTemplate = (
-    <form className='contactForm' onSubmit={(event) => { event.preventDefault(); submit() }}>
-      <div className='contactMailWrapper'>
-        <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} />
-        <div className='contactMailIconWrapper'>
+  function formTemplate(mailInputField) {
+    return (
+      <form className='contactForm' onSubmit={(event) => { event.preventDefault(); submit() }}>
+        <div className='contactMailWrapper'>
+          {mailInputField}
         </div>
-      </div>
-      <div style={{ height: '20px' }} />
-      <textarea type='text' placeholder='Deine Nachricht an uns...' id='contactMsg' />
-      <div style={{ height: '20px' }} />
-      <div className='contactSubmitWrapper'>
-        <input type='button' onClick={submit} value='Senden' id='contactSubmit' />
-      </div>
-    </form>
+        <div style={{ height: '20px' }} />
+        <textarea type='text' placeholder='Deine Nachricht an uns...' id='contactMsg' />
+        <div style={{ height: '20px' }} />
+        <div className='contactSubmitWrapper'>
+          <input type='button' onClick={submit} value='Senden' id='contactSubmit' />
+        </div>
+      </form>
+    )
+  }
+
+  const formTemplateDefault = formTemplate(
+    <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} />
   )
 
-  const formTemplateValid = (
-    <form className='contactForm' onSubmit={(event) => { event.preventDefault(); submit() }}>
-      <div className='contactMailWrapper'>
-        <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail} />
-        <div className='contactMailIconWrapper'>
-          <IconContext.Provider value={{ size: 30, color: 'green' }}>
-            <BsFillCheckCircleFill />
-          </IconContext.Provider>
-        </div>
+  const formTemplateValid = formTemplate(
+    <>
+      <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail} />
+      <div className='contactMailIconWrapper'>
+        <IconContext.Provider value={{ size: 30, color: 'green' }}>
+          <BsFillCheckCircleFill />
+        </IconContext.Provider>
       </div>
-      <div style={{ height: '20px' }} />
-      <textarea type='text' placeholder='Deine Nachricht an uns...' id='contactMsg' />
-      <div style={{ height: '20px' }} />
-      <div className='contactSubmitWrapper'>
-        <input type='button' onClick={submit} value='Senden' id='contactSubmit' />
-      </div>
-    </form>
+    </>
   )
 
-  const formTemplateInvalid = (
-    <form className='contactForm' onSubmit={(event) => { event.preventDefault(); submit() }}>
-      <div className='contactMailWrapper'>
-        <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail} />
-        <div className='contactMailIconWrapper'>
-          <IconContext.Provider value={{ size: 30, color: 'red' }}>
-            <BsFillXCircleFill />
-          </IconContext.Provider>
-        </div>
+  const formTemplateInvalid = formTemplate(
+    <>
+      <input type='email' placeholder='Deine Mail-Adresse...' id='contactMail' onBlur={mailFinished} onInput={checkMail} />
+      <div className='contactMailIconWrapper'>
+        <IconContext.Provider value={{ size: 30, color: 'red' }}>
+          <BsFillXCircleFill />
+        </IconContext.Provider>
       </div>
-      <div style={{ height: '20px' }} />
-      <textarea type='text' placeholder='Deine Nachricht an uns...' id='contactMsg' />
-      <div style={{ height: '20px' }} />
-      <div className='contactSubmitWrapper'>
-        <input type='button' onClick={submit} value='Senden' id='contactSubmit' />
-      </div>
-    </form>
+    </>
   )
+
+  function waitingCircles() {
+    //creates array containing 8 divs as loading circle
+    return Array.from({length: 8}, (_, i) => <div className='loadingCircleWrapper' key={i}><div className='loadingCircle' /></div>)
+  }
 
   const waitingTemplate = (
     <div className='contactForm'>
-      <div className='contactSuccess'>
+      <div className='contactFeedback'>
         <div className='loadingAnimation'>
-          <div className='loadingCircleWrapper'><div className='loadingCircle' /></div>
-          <div className='loadingCircleWrapper'><div className='loadingCircle' /></div>
-          <div className='loadingCircleWrapper'><div className='loadingCircle' /></div>
-          <div className='loadingCircleWrapper'><div className='loadingCircle' /></div>
-          <div className='loadingCircleWrapper'><div className='loadingCircle' /></div>
-          <div className='loadingCircleWrapper'><div className='loadingCircle' /></div>
-          <div className='loadingCircleWrapper'><div className='loadingCircle' /></div>
-          <div className='loadingCircleWrapper'><div className='loadingCircle' /></div>
+          {waitingCircles()}
         </div>
       </div>
     </div>
   )
 
-  const successTemplate = (
-    <div className='contactForm'>
-      <div className='contactSuccess'>
-        <div className='successText'>
-          Vielen Dank für deine Nachricht!
-          <br /><br />
-          Wir melden uns so schnell wie möglich.
+  function feedbackTemplate(text) {
+    return (
+      <div className='contactForm'>
+        <div className='contactFeedback'>
+          <div className='feedbackText'>
+            {text}
+          </div>
         </div>
       </div>
-    </div>
+    )
+  }
+
+  const successTemplate = feedbackTemplate(
+    <>
+      Vielen Dank für deine Nachricht!
+      <br /><br />
+      Wir melden uns so schnell wie möglich.
+    </>
   )
 
-  const errorTemplate = (
-    <div className='contactForm'>
-      <div className='contactSuccess'>
-        <div className='successText'>
-          Das hat leider nicht geklappt.
-          <br /><br />
-          Versuch es doch später nochmal, oder probiere einen unserer anderen Kanäle.
-        </div>
-      </div>
-    </div>
+  const errorTemplate = feedbackTemplate(
+    <>
+      Das hat leider nicht geklappt.
+      <br /><br />
+      Versuch es doch später nochmal, oder probiere einen unserer anderen Kanäle.
+    </>
   )
 
-  const [form, setForm] = useState(formTemplate)
+  const [form, setForm] = useState(formTemplateDefault)
 
   const isDesktop = isBrowser || isTablet
   return (

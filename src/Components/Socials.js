@@ -15,8 +15,8 @@ function Socials() {
             </IconContext.Provider>
           </a>
         </div>
-        <a href='https://instagram.com/sevenheaven.band' target='_blank' rel='noopener noreferrer'>
-          @sevenheaven.band
+        <a style={{textDecoration: 'none'}} href='https://instagram.com/sevenheaven.band' target='_blank' rel='noopener noreferrer'>
+          @<u>sevenheaven.band</u>
         </a>
       </span>
       <span className='socialContainer' id='mail'>

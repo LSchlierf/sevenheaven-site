@@ -86,32 +86,34 @@ function RepertoirePage() {
         <img src={constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
-        <Header text='Repertoire' fontSize={isDesktop ? '250%' : '150%'} paddingBottom='0' />
-        <div className='repertoireHeadliners'>
-          {
-            Headliners.map((item, index) => RepertoireCard(item.title, item.songs, index))
-          }
+        <div className='pageContentContainer'>
+          <Header text='Repertoire' fontSize={isDesktop ? '250%' : '150%'} paddingBottom='0' />
+          <div className='repertoireHeadliners'>
+            {
+              Headliners.map((item, index) => RepertoireCard(item.title, item.songs, index))
+            }
+          </div>
+          <div style={{ padding: '0px' }} />
+          <div className='moreRepertoire' onClick={gotoRepertoire}>
+            <IconContext.Provider value={{ color: 'white', size: 40 }}>
+              <BsChevronDown />
+              <div className='moreRepertoireText'>
+                Hier findest Du unsere gesame Songliste
+              </div>
+              <BsChevronDown />
+            </IconContext.Provider>
+          </div>
+          <div style={{ padding: '3vw' }} />
+          <BackToMainPage backgroundColor='darkred' retLocation={location.state?.retLocation} />
+          <div className='repertoire'>
+            {
+              Repertoire.map(RepertoireItem)
+            }
+          </div>
+          <div style={{ padding: '3vw' }} />
+          <BackToMainPage retLocation={location.state?.retLocation} />
+          <div style={{ padding: '30px' }} />
         </div>
-        <div style={{ padding: '0px' }} />
-        <div className='moreRepertoire' onClick={gotoRepertoire}>
-          <IconContext.Provider value={{ color: 'white', size: 40 }}>
-            <BsChevronDown />
-            <div className='moreRepertoireText'>
-              Hier findest Du unsere gesame Songliste
-            </div>
-            <BsChevronDown />
-          </IconContext.Provider>
-        </div>
-        <div style={{ padding: '3vw' }} />
-        <BackToMainPage backgroundColor='darkred' retLocation={location.state?.retLocation} />
-        <div className='repertoire'>
-          {
-            Repertoire.map(RepertoireItem)
-          }
-        </div>
-        <div style={{ padding: '3vw' }} />
-        <BackToMainPage retLocation={location.state?.retLocation} />
-        <div style={{ padding: '3vw' }} />
         <PageFooter />
       </div>
     </>

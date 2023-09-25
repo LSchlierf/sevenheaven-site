@@ -28,33 +28,35 @@ function BandPage() {
         <img src={constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
-        <Header text='Die Band' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />
-        <div className='portraits'>
-          <div className='portraitWrapper'>
-            <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Lucas Schlierf<div className='subText'>Leadgesang</div></>} img='band/Lucas.jpg' />
+        <div className='pageContentContainer'>
+          <Header text='Die Band' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />
+          <div className='portraits'>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Lucas Schlierf<div className='subText'>Leadgesang</div></>} img='band/Lucas.jpg' />
+            </div>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Luisa Loher<div className='subText'>Leadgesang</div></>} img='band/Luisa.jpg' />
+            </div>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Florian Döhr<div className='subText'>Leadgitarre</div></>} img='band/Florian.jpg' />
+            </div>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Leo Hellerer<div className='subText'>Rhythmusgitarre + Bass</div></>} img='band/Leo.jpg' />
+            </div>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Julian Höflmaier<div className='subText'>Bass + Gesang</div></>} img='band/Julian.jpg' />
+            </div>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Daniel Bopp<div className='subText'>Schlagzeug + Gesang</div></>} img='band/Daniel.jpg' />
+            </div>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Jakob Friederich<div className='subText'>Piano + Gesang</div></>} img='band/Jakob.jpg' />
+            </div>
           </div>
-          <div className='portraitWrapper'>
-            <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Luisa Loher<div className='subText'>Leadgesang</div></>} img='band/Luisa.jpg' />
-          </div>
-          <div className='portraitWrapper'>
-            <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Florian Döhr<div className='subText'>Leadgitarre</div></>} img='band/Florian.jpg' />
-          </div>
-          <div className='portraitWrapper'>
-            <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Leo Hellerer<div className='subText'>Rhythmusgitarre + Bass</div></>} img='band/Leo.jpg' />
-          </div>
-          <div className='portraitWrapper'>
-            <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Julian Höflmaier<div className='subText'>Bass + Gesang</div></>} img='band/Julian.jpg' />
-          </div>
-          <div className='portraitWrapper'>
-            <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Daniel Bopp<div className='subText'>Schlagzeug + Gesang</div></>} img='band/Daniel.jpg' />
-          </div>
-          <div className='portraitWrapper'>
-            <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Jakob Friederich<div className='subText'>Piano + Gesang</div></>} img='band/Jakob.jpg' />
-          </div>
+          <div style={{ paddingBottom: 30 }} />
+          <BackToMainPage backgroundColor='darkred' retLocation={location.state?.retLocation} />
+          <div style={{ paddingBottom: '30px' }} />
         </div>
-        <div style={{ paddingBottom: 30 }} />
-        <BackToMainPage backgroundColor='darkred' retLocation={location.state?.retLocation} />
-        <div style={{ paddingBottom: '10vh' }} />
         <PageFooter />
       </div>
     </>

@@ -126,7 +126,7 @@ function ContactPage() {
 
   function waitingCircles() {
     //creates array containing 8 divs as loading circle
-    return Array.from({length: 8}, (_, i) => <div className='loadingCircleWrapper' key={i}><div className='loadingCircle' /></div>)
+    return Array.from({ length: 8 }, (_, i) => <div className='loadingCircleWrapper' key={i}><div className='loadingCircle' /></div>)
   }
 
   const waitingTemplate = (
@@ -177,15 +177,17 @@ function ContactPage() {
         <img src={constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
-        <Header text='Kontakt' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />
-        {form}
-        <div style={{ height: '30px' }} />
-        <div className='otherContact'>
-          Du erreichst uns auch über andere Kanäle.
+        <div className='pageContentContainer'>
+          <Header text='Kontakt' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />
+          {form}
+          <div style={{ height: '30px' }} />
+          <div className='otherContact'>
+            Du erreichst uns auch über andere Kanäle.
+          </div>
+          <Socials />
+          <BackToMainPage retLocation={location.state?.retLocation} />
+          <div style={{ paddingBottom: '30px' }} />
         </div>
-        <Socials />
-        <BackToMainPage retLocation={location.state?.retLocation} />
-        <div style={{ paddingBottom: '30px' }} />
         <PageFooter />
       </div>
     </>

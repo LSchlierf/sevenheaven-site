@@ -41,6 +41,14 @@ code {
   position: absolute;
   width: 100vw;
   top: 40vw;
+  min-height: calc(100vh - 40vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pageContentContainer {
+  height: fit-content;
 }
 
 .sectionWrapper {
@@ -81,6 +89,7 @@ code {
 
 @media only screen and (min-width: 768px) {
   .subPageContent {
-    top: 12vw
+    top: 12vw;
+    min-height: calc(100vh - 12vw);
   }
 }

@@ -5,7 +5,6 @@ import TitleBar from '../Components/TitleBar';
 import Headliners from './repertoire/RepertoireHeadliners.json'
 import Repertoire from './repertoire/Repertoire.json'
 import Header from '../Components/Header';
-import BandLogo from '../Components/BandLogo';
 import BackToMainPage from '../Components/BackToMainPage';
 import PageFooter from '../Components/PageFooter';
 import { BsChevronDown } from "react-icons/bs";
@@ -36,14 +35,13 @@ function RepertoireCard(title, songs, index) {
 }
 
 function RepertoireItem(item, index) {
-  const noCenter = isDesktop ? false : true
   if (item.songs.length === 0) {
     return (<></>)
   }
   return (
     <div className='repertoireItem' key={index}>
       <div className='repertoireLetter'>
-        <BandLogo noCenter={noCenter} text={item.letter} backgroundColor='rgba(0,0,0,0)' padding='0' fontSize={isDesktop ? '500%' : '300%'} />
+        {item.letter}
       </div>
       <div className='repertoireSongs'>
         {item.songs.map((item, index) => {

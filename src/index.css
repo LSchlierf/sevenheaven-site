@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Nexa Rust Sans";
+  src: url("/public/fonts/NexaRustSans2.ttf");
+}
+
+@font-face {
+  font-family: "Nexa Rust Sans Modified";
+  src: url("/public/fonts/NexaRustSans2Modified.ttf");
+}
+
 html {
   color: white;
   background-color: black;
@@ -10,7 +20,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Nexa Rust Sans W00 Black 02", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Nexa Rust Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

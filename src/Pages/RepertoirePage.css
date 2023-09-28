@@ -67,6 +67,12 @@
     padding-top: 5vw;
 }
 
+.repertoireLetter {
+    font-family: "Nexa Rust Sans";
+    font-size: 70px;
+    text-align: center;
+}
+
 @media only screen and (min-width: 768px) {
     .repertoireCard {
         box-sizing: border-box;
@@ -107,5 +113,9 @@
     .repertoireSongs > .repertoireSong {
         text-align: center;
         font-size: x-large;
+    }
+
+    .repertoireLetter {
+        font-size: 100px;
     }
 }

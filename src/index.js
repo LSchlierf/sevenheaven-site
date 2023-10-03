@@ -7,6 +7,7 @@ import RepertoirePage from './Pages/RepertoirePage';
 import GalleryPage from './Pages/GalleryPage';
 import BandPage from './Pages/BandPage';
 import ContactPage from './Pages/ContactPage';
+import ImprintPage from './Pages/ImprintPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -28,6 +29,7 @@ root.render(
       <Route path='/repertoire' element={<RepertoirePage/>}/>
       <Route path='/wir'        element={<BandPage/>      }/>
       <Route path='/kontakt'    element={<ContactPage/>   }/>
+      <Route path='/impressum'  element={<ImprintPage/>   }/>
     </Routes>
   </BrowserRouter>
 );

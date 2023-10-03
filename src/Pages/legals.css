@@ -1,0 +1,19 @@
+.legalTextWrapper {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+
+.legalText {
+    padding: 50px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    flex: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .legalText {
+        font-size: x-large;
+        padding: 50px 10vw;
+    }
+}

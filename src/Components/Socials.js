@@ -21,13 +21,13 @@ function Socials() {
       </span>
       <span className='socialContainer' id='mail'>
         <div className='iconContainer'>
-          <a className='icon' href='mailto:sevenheaven.partyband@gmail.com'>
+          <a className='icon' href='mailto:kontakt@sevenheaven.band'>
             <IconContext.Provider value={{ color: 'white', size: '15vw', style: { 'paddingBottom': '2vw' } }} >
               <TiMail />
             </IconContext.Provider>
           </a>
         </div>
-        <a href='mailto:sevenheaven.partyband@gmail.com'>sevenheaven.partyband@gmail.com</a>
+        <a href='mailto:kontakt@sevenheaven.band'>kontakt@sevenheaven.band</a>
       </span>
     </div>
   )

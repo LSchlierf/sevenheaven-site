@@ -24,8 +24,8 @@ function ImprintPage() {
             81369 München
             <br />
             <br />
-            Bei Fragen oder Hinweisen zum Inhalt wenden Sie sich bitte an <a href='mailto:sevenheaven.partyband@gmail.com'>
-              sevenheaven.partyband@gmail.com
+            Bei Fragen oder Hinweisen zum Inhalt wenden Sie sich bitte an <a href='mailto:kontakt@sevenheaven.band'>
+              kontakt@sevenheaven.band
             </a>.
           </div>
         </div>

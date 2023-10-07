@@ -22,7 +22,7 @@ function Socials() {
       <span className='socialContainer' id='mail'>
         <div className='iconContainer'>
           <a className='icon' href='mailto:kontakt@sevenheaven.band'>
-            <IconContext.Provider value={{ color: 'white', size: '15vw', style: { 'paddingBottom': '2vw' } }} >
+            <IconContext.Provider value={{ color: 'white', size: '15vw', style: { 'paddingBottom': '1.7vw' } }} >
               <TiMail />
             </IconContext.Provider>
           </a>

@@ -4,10 +4,11 @@ import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './Pages/MainPage';
 import RepertoirePage from './Pages/RepertoirePage';
-import GalleryPage from './Pages/GalleryPage';
+import { GalleryPage, ConcertGallery } from './Pages/GalleryPage';
 import BandPage from './Pages/BandPage';
 import ContactPage from './Pages/ContactPage';
 import ImprintPage from './Pages/ImprintPage';
+import DataProtectionPage from './Pages/DataProtectionPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -24,12 +25,14 @@ updateScrolled()
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/'           element={<MainPage/>      }/>
-      <Route path='/galerie'    element={<GalleryPage/>   }/>
-      <Route path='/repertoire' element={<RepertoirePage/>}/>
-      <Route path='/wir'        element={<BandPage/>      }/>
-      <Route path='/kontakt'    element={<ContactPage/>   }/>
-      <Route path='/impressum'  element={<ImprintPage/>   }/>
+      <Route path='/' element={<MainPage />} />
+      <Route path='/galerie' element={<GalleryPage />} />
+      <Route path='/galerie/:concert' element={<ConcertGallery />} />
+      <Route path='/repertoire' element={<RepertoirePage />} />
+      <Route path='/wir' element={<BandPage />} />
+      <Route path='/kontakt' element={<ContactPage />} />
+      <Route path='/impressum' element={<ImprintPage />} />
+      <Route path='/datenschutz' element={<DataProtectionPage />} />
     </Routes>
   </BrowserRouter>
 );
@@ -50,11 +53,13 @@ bg img static        -5
 
 /*
 TODO: 
-- burger menü fixed                     [x]
-- Abstände checken                      [x]luz<3pete
-- zurück mit location                   [x]
-- Icons                                 [x]
-- Page footer kleiner                   [x]
-- hintergrund bild scrollt hoch rot     [x]
-- hintergrund bild scrollt hoch schwarz [x]
+- burger menü fixed                      [x]
+- Abstände checken                       [x]
+- zurück mit location                    [x]
+- Icons                                  [x]
+- Page footer kleiner                    [x]
+- hintergrund bild scrollt hoch rot      [x]
+- hintergrund bild scrollt hoch schwarz  [x]
+- galerieseite pro Konzert bildgröße fix [x]
+- ganze Textbox klickbar bei sticky link [ ]
 */

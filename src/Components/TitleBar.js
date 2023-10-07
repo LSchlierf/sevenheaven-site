@@ -36,7 +36,7 @@ function desktopBar(navigate) {
           </div>
         </div>
         <div className='centerLogo'>
-          <img src='logo192.png' alt='bandlogo'/>
+          <img src='/logo192.png' alt='bandlogo'/>
           <div className='centerLogoText'>
             <a href='/' style={{ textDecoration: 'none' }}>
               <BandLogo padding='0' fontSize='1.3vw' cursor='pointer'/>
@@ -70,7 +70,7 @@ function mobileBar(navigate) {
     <div className='mobileBar'>
       <BandLogo fontSize='8vw' cursor='pointer' onClick={() => navigate('/')} />
       <div className='imgContainer'>
-        <img src='Logo.png' alt='Bandlogo' onClick={() => navigate('/')} />
+        <img src='/Logo.png' alt='Bandlogo' onClick={() => navigate('/')} />
       </div>
     </div>
   )

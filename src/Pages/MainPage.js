@@ -5,7 +5,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { IconContext } from 'react-icons/lib';
 import TitleBar from '../Components/TitleBar';
 import Header from '../Components/Header';
-import { ImageCard } from '../Components/ImageCard';
+import { ImageCard, VideoCard } from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BandLogo from '../Components/BandLogo';
 import Socials from '../Components/Socials';
@@ -18,7 +18,7 @@ function getImages(input, className) {
 
 function MainPage() {
   const isDesktop = isBrowser || isTablet
-  const [img, setImg] = useState(getImages(constants.cyclerM, 'bg'))
+  const [img, setImg] = useState(getImages(isDesktop ? constants.cyclerD : constants.cyclerM, 'bg'))
   const [menu, setMenu] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
@@ -149,7 +149,7 @@ function MainPage() {
         <div className='contactWrapper'>
           <div className='contact'>
             <a href='/kontakt' style={{ textDecoration: 'none' }}>
-              <BandLogo text='Anfragen' fontSize='120%' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
+              <BandLogo text='Anfragen' fontSize={isDesktop ? '35px' : '120%'} backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
             </a>
           </div>
         </div>
@@ -196,12 +196,12 @@ function MainPage() {
       <div className='scrollContent' >
         <Header text='musik' id='musik' fontSize={isDesktop ? '400%' : '300%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
         <div className='contentContainer'>
-          <ImageCard text={<>40-jähriges Westpark Jubiläum<br />(Highlights)</>} />
-          <ImageCard text={<>Musikalisches Weinfest 2023<br />(Hightlights)</>} />
+          <VideoCard vid='https://www.youtube.com/embed/j6pDTYMMN7o?si=mEWEJK5ZGlRIHqyF' text={<>40-jähriges Westpark Jubiläum 2023<br />(Highlights)</>} thumbnail='thumbnails/westpark.jpg' domain='YouTube' />
+          <VideoCard vid='https://www.youtube.com/embed/urSar1gnXOQ?si=DQh8lAVymiEx-CFJ' text={<>Konzert Jugendhaus Neuried 2023<br />(Hightlights)</>} thumbnail='thumbnails/juha.jpg' domain='YouTube' />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} >
-            Willst du noch mehr von uns sehen? {stickyLink('Hier', '/galerie', 'musik')} sind weitere Videos und Fotos.
+            Willst du noch mehr von uns sehen? {stickyLink('Hier', '/galerie', 'musik')} sind weitere Fotos.
           </div>
         </div>
         <div className='contentContainer'>
@@ -216,23 +216,25 @@ function MainPage() {
           <div className='sectionContent'>
             <Header text='Angebot' id='angebot' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
             <div className='contentContainer-3'>
-              <ImageCard text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor='darkred' />
-              <ImageCard text='Zu einer guten Hochzeit gehört Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor='darkred' />
-              <ImageCard text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor='darkred' />
+              <ImageCard img='img/itsMyLife.PNG' text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard img='img/stimmung.JPG' text='Zu einer guten Hochzeit gehört Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
             </div>
             <div className='textBoxWrapper'>
-              <div className='textBox' style={{ background: 'darkred', fontsize: 'large' }} >
+              <div className='textBox' style={{ background: isDesktop ? 'rgba(0,0,0,0.5)' : 'darkred', fontsize: 'large' }} >
                 Interesse? Kontaktiere uns gerne {stickyLink('hier', '/kontakt', 'angebot')}.
               </div>
             </div>
           </div>
           <div className='sectionImgContainer'>
-            <img src={constants.staticBgBW} alt='background' />
+            {
+              isDesktop ? <></> : <img src={constants.staticBgBW} alt='background' />
+            }
           </div>
         </div>
         <Header text='Über uns' id='wir' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
         <div className='contentContainer'>
-          <ImageCard text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' />
+          <ImageCard img='img/friends.JPG' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px'/>
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} >

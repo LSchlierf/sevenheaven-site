@@ -3,27 +3,29 @@ import './ImageCard.css'
 import { v4 as uuid } from 'uuid'
 
 function ImageCard(props) {
-  const img = props.img || 'placeholder.png'
+  const img = props.img || 'bg/bw.jpg'
   const text = props.text || 'placeholder text lorem ipsum dolor sit amet'
   const fontSize = props.fontSize || 'larger'
   const backgroundColor = props.backgroundColor || 'black'
   const height = '55%'
   const textAlign = 'center'
+  const padding = props.padding
   const styleElement = {
     fontSize: fontSize,
     backgroundColor: backgroundColor,
-    textAlign: textAlign
+    textAlign: textAlign,
+    padding: padding
   }
   return (
-    <div className='imageCardWrapperWrapper'>
-      <div className='imageCardWrapper' style={{ paddingBottom: height }} >
+    <div className='imageCardWrapperWrapper' onClick={props.onClick} >
+      <div className='imageCardWrapper' style={{ paddingBottom: height, cursor: props.cursor || 'auto' }} >
         <div className='imageCard'>
           <div className='imageWrapper'>
             <img src={img} alt='card' />
           </div>
         </div>
       </div>
-      <div className='caption'>
+      <div className='caption' style={{ cursor: props.cursor || 'auto' }}>
         <div className='textContainer' style={styleElement}>
           {text}
         </div>
@@ -33,7 +35,7 @@ function ImageCard(props) {
 }
 
 function PortraitCard(props) {
-  const img = props.img || 'placeholder.png'
+  const img = props.img || 'bg/bw.jpg'
   const text = props.text || 'placeholder text lorem ipsum dolor sit amet'
   const fontSize = props.fontSize || 'larger'
   const backgroundColor = props.backgroundColor || 'black'
@@ -59,11 +61,11 @@ function PortraitCard(props) {
 }
 
 function VideoCard(props) {
-  const vid = props.vid || 'https://www.youtube.com/embed/TApmI8YtYhc?si=xzFtA1pWDk0bj66u'
+  const vid = props.vid || 'https://www.youtube.com/embed/dQw4w9WgXcQ?si=xWIxTEDuoBNsi3nL'
   const text = props.text || 'placeholder text lorem ipsum dolor sit amet'
   const fontSize = props.fontSize || 'larger'
   const backgroundColor = props.backgroundColor || 'black'
-  const height = '55%'
+  const height = '56.2%'
   const textAlign = 'center'
   const thumbnail = props.thumbnail || ''
   const styleElement = {

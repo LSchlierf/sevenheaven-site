@@ -217,7 +217,7 @@ function MainPage() {
             <Header text='Angebot' id='angebot' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
             <div className='contentContainer-3'>
               <ImageCard img='img/itsMyLife.PNG' text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
-              <ImageCard img='img/stimmung.JPG' text='Zu einer guten Hochzeit gehört Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard img='img/stimmung.JPG' text='Zu einer guten Hochzeit gehören Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
               <ImageCard text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
             </div>
             <div className='textBoxWrapper'>

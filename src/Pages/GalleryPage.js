@@ -46,7 +46,7 @@ function ConcertGallery() {
         {largeImg}
         <div className='pageContentContainer'>
           <Header text={concert.title} fontSize={isDesktop ? '200%' : '100%'} paddingBottom='0' />
-          <div className='contentContainer-3'>
+          <div className='contentContainer'>
             {concert.images.map(galleryCard)}
           </div>
           <BackToMainPage to='/galerie' text='Zurück zur Galerie' />

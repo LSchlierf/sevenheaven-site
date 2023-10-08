@@ -59,6 +59,13 @@ function ConcertGallery() {
 }
 
 function GalleryPage() {
+  function galleryPreview(concert, index) {
+    console.log(concert)
+    return (
+      <ImageCard onClick={() => navigate('/galerie/' + concert[0])} cursor='pointer' text={concert[1].preview} backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' key={index} />
+    )
+  }
+
   const location = useLocation()
   const navigate = useNavigate()
   useEffect(() => {
@@ -81,8 +88,7 @@ function GalleryPage() {
             <div className='sectionContent'>
               <div style={{ padding: '30px' }} />
               <div className='contentContainer-3'>
-                <ImageCard onClick={() => navigate('/galerie/juha')} cursor='pointer' text='JuHa Neuried 2023' backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' />
-                <ImageCard onClick={() => navigate('/galerie/interim')} cursor='pointer' text='Interim Laim 2023' backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' />
+                {Object.entries(concerts).map(galleryPreview)}
                 <ImageCard text='40 Jahre Westpark' backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' />
                 <ImageCard text='Musikalisches Weinfest 2023' backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' />
               </div>

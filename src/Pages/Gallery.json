@@ -1,6 +1,7 @@
 {
     "juha": {
         "title": "JuHa Neuried",
+        "preview": "JuHa Neuried 2023",
         "images": [
             "/img/juha/L1000537.JPG",
             "/img/juha/L1000544.JPG",
@@ -33,6 +34,7 @@
     },
     "interim": {
         "title": "Interim",
+        "preview": "Interim Laim 2023",
         "images": [
             "/img/interim/_DSB4913.jpeg",
             "/img/interim/_DSB4957.jpeg",

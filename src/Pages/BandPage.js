@@ -53,6 +53,15 @@ function BandPage() {
               <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Jakob Friederich<div className='subText'>Piano + Gesang</div></>} img='band/Jakob.jpg' />
             </div>
           </div>
+          <Header text='Die Crew' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />
+          <div className='portraits'>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Patrick Friemelt<div className='subText'>Tontechnik</div></>} img='band/Patrick.jpg' />
+            </div>
+            <div className='portraitWrapper'>
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Ylai Elsler<div className='subText'>Tontechnik</div></>} img='band/Ylai.jpg' />
+            </div>
+          </div>
           <div style={{ paddingBottom: 30 }} />
           <BackToMainPage backgroundColor='darkred' retLocation={location.state?.retLocation} />
           <div style={{ paddingBottom: '30px' }} />

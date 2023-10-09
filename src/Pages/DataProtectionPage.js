@@ -15,8 +15,9 @@ function DataProtectionPage() {
       <div className='subPageContent'>
         <div className='legalTextWrapper'>
           <div className='legalText'>
-            <b>Datenschutzerklärung</b>
+            <u>Datenschutzerklärung</u>
             <br /><br />
+            Folgt in Kürze.
           </div>
         </div>
         <BackToMainPage />

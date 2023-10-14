@@ -17,6 +17,8 @@ function ImprintPage() {
           <div className='legalText'>
             Verantwortlich für den Inhalt dieser Seite:
             <br />
+            Sevenheaven GbR
+            <br />
             Lucas Schlierf
             <br />
             Klingerstraße 31

@@ -70,7 +70,6 @@ function MainPage() {
   }
 
   document.onkeydown = (e) => {
-    e = e || window.event
     switch (e.code) {
       case 'ArrowLeft':
         slideLeft()

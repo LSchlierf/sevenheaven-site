@@ -22,6 +22,12 @@ function ConcertGallery() {
     )
   }
 
+  document.onkeydown = (e) => {
+    if(e.code === "Escape") {
+      setLargeImg(<></>)
+    }
+  }
+
   function galleryCard(img, index) {
     return (
       <div className='galleryWrapper' key={index}>
@@ -60,7 +66,6 @@ function ConcertGallery() {
 
 function GalleryPage() {
   function galleryPreview(concert, index) {
-    console.log(concert)
     return (
       <ImageCard onClick={() => navigate('/galerie/' + concert[0])} cursor='pointer' text={concert[1].preview} backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' key={index} />
     )

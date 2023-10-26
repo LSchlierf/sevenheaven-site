@@ -11,6 +11,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { IconContext } from 'react-icons';
 import constants from './Constants.json'
 import { useLocation, useNavigate } from 'react-router-dom';
+import BurgerMenu from '../Components/BurgerMenu';
 const isDesktop = isBrowser || isTablet
 
 function RepertoireCard(title, songs, index) {
@@ -80,6 +81,7 @@ function RepertoirePage() {
   return (
     <>
       <TitleBar />
+      <BurgerMenu />
       <div className='bgImgContainer'>
         <img src={constants.staticBg} alt='background' />
       </div>

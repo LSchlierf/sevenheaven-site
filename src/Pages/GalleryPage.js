@@ -9,6 +9,7 @@ import BackToMainPage from '../Components/BackToMainPage';
 import constants from './Constants.json'
 import concerts from './Gallery.json'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import BurgerMenu from '../Components/BurgerMenu';
 const isDesktop = isBrowser || isTablet
 
 function ConcertGallery() {
@@ -45,6 +46,7 @@ function ConcertGallery() {
   return (
     <>
       <TitleBar />
+      <BurgerMenu />
       <div className='bgImgContainer'>
         <img src={constants.staticBg} alt='background' />
       </div>
@@ -99,6 +101,7 @@ function GalleryPage() {
   return (
     <>
       <TitleBar />
+      <BurgerMenu />
       <div className='bgImgContainer'>
         <img src={constants.staticBg} alt='background' />
       </div>

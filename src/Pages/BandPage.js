@@ -8,6 +8,7 @@ import PageFooter from '../Components/PageFooter';
 import BackToMainPage from '../Components/BackToMainPage';
 import constants from './Constants.json'
 import { useLocation, useNavigate } from 'react-router-dom';
+import BurgerMenu from '../Components/BurgerMenu';
 
 function BandPage() {
   const isDesktop = isBrowser || isTablet
@@ -24,6 +25,7 @@ function BandPage() {
   return (
     <>
       <TitleBar />
+      <BurgerMenu />
       <div className='bgImgContainer'>
         <img src={constants.staticBg} alt='background' />
       </div>

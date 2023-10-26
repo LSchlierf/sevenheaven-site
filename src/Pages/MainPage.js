@@ -11,6 +11,7 @@ import BandLogo from '../Components/BandLogo';
 import Socials from '../Components/Socials';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import constants from './Constants.json'
+import BurgerMenu from '../Components/BurgerMenu';
 
 function getImages(input, className) {
   return input.map((src, index) => <img className={className} id={'bg' + index} src={src} alt='background' key={index} />)
@@ -19,7 +20,6 @@ function getImages(input, className) {
 function MainPage() {
   const isDesktop = isBrowser || isTablet
   const [img, setImg] = useState(getImages(isDesktop ? constants.cyclerD : constants.cyclerM, 'bg'))
-  const [menu, setMenu] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -49,22 +49,6 @@ function MainPage() {
     setTimeout(() => {
       for (let item of list) {
         item.classList.remove('animate-to-right')
-      }
-    }, 400)
-  }
-
-  function toggleBurger() {
-    setMenu(!menu)
-    const list = document.getElementsByClassName('burgerLine')
-
-    for (let item of list) {
-      item.classList.toggle('down')
-      item.classList.add('animating')
-    }
-
-    setTimeout(() => {
-      for (let item of list) {
-        item.classList.remove('animating')
       }
     }, 400)
   }
@@ -122,6 +106,7 @@ function MainPage() {
   return (
     <>
       <TitleBar />
+      <BurgerMenu />
       <div className='cyclerBgImgContainer'>
         <img className='cyclerBgImg' src={constants.staticBg} alt='background' />
       </div>
@@ -137,14 +122,6 @@ function MainPage() {
             <FaChevronRight onClick={slideRight} />
           </div>
         </IconContext.Provider>
-        {isDesktop ? <></> : (
-          <div className='burger' onClick={toggleBurger}>
-            <div className='burgerLine' id='burger0' />
-            <div className='burgerLine' id='burger1' />
-            <div className='burgerLine' id='burger2' />
-          </div>
-        )
-        }
         <div className='contactWrapper'>
           <div className='contact'>
             <a href='/kontakt' style={{ textDecoration: 'none' }}>
@@ -152,45 +129,6 @@ function MainPage() {
             </a>
           </div>
         </div>
-        {menu && !isDesktop
-          ?
-          <div className='menu'>
-            <div className='menuImgContainer'>
-              <img src='logo192.png' alt='Bandlogo' />
-            </div>
-            <div className='menuItem'>
-              <BandLogo text='Home' fontSize='6vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => {
-                toggleBurger()
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-              }} />
-            </div>
-            <div className='menuItem'>
-              <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollToM('musik') }} />
-              <a href='/galerie' style={{ textDecoration: 'none' }}>
-                <BandLogo text='Galerie' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
-              </a>
-              <a href='/repertoire' style={{ textDecoration: 'none' }}>
-                <BandLogo text='Repertoire' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
-              </a>
-            </div>
-            <div className='menuItem'>
-              <BandLogo text='Angebot' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollToM('angebot') }} />
-            </div>
-            <div className='menuItem'>
-              <BandLogo text='Über uns' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollToM('wir') }} />
-              <a href='/wir' style={{ textDecoration: 'none' }}>
-                <BandLogo text='Die Band' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
-              </a>
-            </div>
-            <div className='menuItem'>
-              <BandLogo text='Kontakt' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollToM('kontakt') }} />
-              <a href='/kontakt' style={{ textDecoration: 'none' }}>
-                <BandLogo text='Kontaktformular' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />
-              </a>
-            </div>
-          </div>
-          : <></>
-        }
       </div >
       <div className='scrollContent' >
         <Header text='musik' id='musik' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />

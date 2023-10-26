@@ -193,7 +193,7 @@ function MainPage() {
         }
       </div >
       <div className='scrollContent' >
-        <Header text='musik' id='musik' fontSize={isDesktop ? '400%' : '300%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
+        <Header text='musik' id='musik' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='contentContainer'>
           <VideoCard vid='https://www.youtube.com/embed/j6pDTYMMN7o?si=mEWEJK5ZGlRIHqyF' text={<>40-jähriges Westpark Jubiläum 2023<br />(Highlights)</>} thumbnail='thumbnails/westpark.jpg' domain='YouTube' />
           <VideoCard vid='https://www.youtube.com/embed/urSar1gnXOQ?si=DQh8lAVymiEx-CFJ' text={<>Konzert Jugendhaus Neuried 2023<br />(Hightlights)</>} thumbnail='thumbnails/juha.jpg' domain='YouTube' />
@@ -213,15 +213,15 @@ function MainPage() {
         </div>
         <div className='sectionWrapper'>
           <div className='sectionContent'>
-            <Header text='Angebot' id='angebot' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
+            <Header text='Angebot' id='angebot' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
             <div className='contentContainer-3'>
               <ImageCard img='img/itsMyLife.PNG' text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
               <ImageCard img='img/stimmung.JPG' text='Zu einer guten Hochzeit gehören Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
               <ImageCard img='img/liveBand.JPG' text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
-            </div>
-            <div className='textBoxWrapper'>
-              <div className='textBox' style={{ background: isDesktop ? 'rgba(0,0,0,0.5)' : 'darkred', fontsize: 'large' }} >
-                Interesse? Kontaktiere uns gerne {stickyLink('hier', '/kontakt', 'angebot')}.
+              <div className='textBoxWrapper'>
+                <div className='textBox' style={{ background: isDesktop ? 'rgba(0,0,0,0.5)' : 'darkred', fontSize: 'large' }} >
+                  Interesse? Kontaktiere uns gerne {stickyLink('hier', '/kontakt', 'angebot')}.
+                </div>
               </div>
             </div>
           </div>
@@ -231,16 +231,16 @@ function MainPage() {
             }
           </div>
         </div>
-        <Header text='Über uns' id='wir' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
+        <Header text='Über uns' id='wir' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='contentContainer'>
-          <ImageCard img='img/friends.JPG' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px'/>
+          <ImageCard img='img/friends.JPG' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px' />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} >
             {stickyLink('Hier', '/wir', 'wir')} erfährst du mehr über unsere einzelnen Bandmitglieder.
           </div>
         </div>
-        <Header text='Kontakt' id='kontakt' fontSize={isDesktop ? '350%' : '200%'} paddingBottom={isDesktop ? "60px" : "10vw"} />
+        <Header text='Kontakt' id='kontakt' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'darkred', fontSize: 'large' }} >
             {stickyLink('Schreibe uns eine Nachricht!', '/kontakt', 'kontakt')}

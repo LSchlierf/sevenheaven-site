@@ -56,7 +56,7 @@
     padding: 10px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-size: 4vw;
+    font-size: 20px;
 }
 
 .repertoireItem {
@@ -88,12 +88,14 @@
 
     .moreRepertoire {
         width: 40vw;
+        height: 90px;
         left: 30vw;
         right: 30vw;
+        cursor: pointer;
     }
 
     .moreRepertoireText {
-        font-size: 200%;
+        font-size: 30px;
     }
 
     .repertoire {

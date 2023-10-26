@@ -2,6 +2,7 @@
     "23-09-2023": {
         "title": "23. 09. 2023",
         "preview": "23. 09. 2023",
+        "thumbnail": "/img/liveBand.JPG",
         "images": [
             "/img/23-09-2023/IMG_7616.JPG",
             "/img/23-09-2023/IMG_7684.JPG",
@@ -27,6 +28,7 @@
     "westparkjubulaeum": {
         "title": "Westparkjubiläum",
         "preview": "40. Westparkjubiläum 2023",
+        "thumbnail": "/img/westparkjubilaeum/20230722_215033.jpg",
         "images": [
             "/img/westparkjubilaeum/20230722_215033.jpg",
             "/img/westparkjubilaeum/20230722_220342.jpg",
@@ -45,6 +47,7 @@
     "weinfest": {
         "title": "Musikalisches Weinfest",
         "preview": "Musikalisches Weinfest 2023",
+        "thumbnail": "/img/itsMyLife.PNG",
         "images": [
             "/img/weinfest/band.PNG",
             "/img/weinfest/basketCase.PNG",
@@ -66,6 +69,7 @@
     "juha": {
         "title": "JuHa Neuried",
         "preview": "JuHa Neuried 2023",
+        "thumbnail": "/img/juha/L1000673.JPG",
         "images": [
             "/img/juha/L1000537.JPG",
             "/img/juha/L1000544.JPG",
@@ -99,6 +103,7 @@
     "interim": {
         "title": "Interim",
         "preview": "Interim Laim 2023",
+        "thumbnail": "/img/interim.jpg",
         "images": [
             "/img/interim/_DSB4913.jpeg",
             "/img/interim/_DSB4957.jpeg",

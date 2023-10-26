@@ -23,7 +23,7 @@ function ConcertGallery() {
   }
 
   document.onkeydown = (e) => {
-    if(e.code === "Escape") {
+    if (e.code === "Escape") {
       setLargeImg(<></>)
     }
   }
@@ -67,7 +67,23 @@ function ConcertGallery() {
 function GalleryPage() {
   function galleryPreview(concert, index) {
     return (
-      <ImageCard onClick={() => navigate('/galerie/' + concert[0])} cursor='pointer' text={concert[1].preview} backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' key={index} />
+      <div className='imageCardWrapperWrapper' onClick={() => navigate('/galerie/' + concert[0])} key={index}>
+        <div className='imageCardWrapper' style={{ paddingBottom: '55%', cursor: 'pointer' }} >
+          <div className='imageCard'>
+            <div className='imageWrapper'>
+              <img src={concert[1].thumbnail} alt='card' />
+            </div>
+            <div className='galleryOverlay' >
+              <img src='/img/photo-gallery-icon.svg' />
+            </div>
+          </div>
+        </div>
+        <div className='caption' style={{ cursor: 'pointer' }}>
+          <div className='textContainer' style={{ backgroundColor: 'black', textAlign: 'center' }}>
+            {concert[1].preview}
+          </div>
+        </div>
+      </div>
     )
   }
 
@@ -91,16 +107,16 @@ function GalleryPage() {
           <Header text='Galerie' fontSize={isDesktop ? '350%' : '200%'} paddingBottom='0' />
           <div className='sectionWrapper'>
             <div className='sectionContent'>
-              <div style={{ padding: '30px' }} />
+              {/* <div style={{ padding: '30px' }} /> */}
               <div className='contentContainer-3'>
                 {Object.entries(concerts).map(galleryPreview)}
               </div>
             </div>
-            <div className='sectionImgContainer'>
+            {/* <div className='sectionImgContainer'>
               {
                 isDesktop ? <></> : <img src={constants.staticBgBW} alt='background' />
               }
-            </div>
+            </div> */}
           </div>
           <BackToMainPage retLocation={location.state?.retLocation} />
           <div style={{ paddingBottom: '30px' }} />

@@ -79,6 +79,8 @@
     position: relative;
     padding-left: 5vw;
     padding-right: 5vw;
+    display: flex;
+    justify-content: center;
 }
 
 .centerLogo > img {
@@ -89,7 +91,6 @@
     position: absolute;
     z-index: 3;
     top: 2.2vw;
-    left: 2.5vw;
 }
 
 .navContainer {

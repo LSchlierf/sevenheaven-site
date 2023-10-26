@@ -91,7 +91,6 @@ function RepertoirePage() {
               Headliners.map((item, index) => RepertoireCard(item.title, item.songs, index))
             }
           </div>
-          <div style={{ padding: '0px' }} />
           <div className='moreRepertoire' onClick={gotoRepertoire}>
             <IconContext.Provider value={{ color: 'white', size: 40 }}>
               <BsChevronDown />
@@ -101,7 +100,7 @@ function RepertoirePage() {
               <BsChevronDown />
             </IconContext.Provider>
           </div>
-          <div style={{ padding: '3vw' }} />
+          <div style={{ padding: '25px' }} />
           <BackToMainPage backgroundColor='darkred' retLocation={location.state?.retLocation} />
           <div className='repertoire'>
             {

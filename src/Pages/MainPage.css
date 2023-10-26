@@ -271,7 +271,7 @@
 }
 
 .textBoxWrapper {
-    padding-bottom: 10vw;
+    padding-bottom: 60px;
     display: grid;
     justify-content: center;
 }
@@ -280,13 +280,19 @@
     width: 80vw;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
     padding: 15px;
     border-radius: 15px;
 }
 
 @media only screen and (min-width: 768px) {
-    .textBoxWrapper {
-        padding-bottom: 100px;
+
+    .contentContainer-3 > .textBoxWrapper {
+        width: 29vw;
+    }
+
+    .contentContainer-3 > .textBoxWrapper > .textBox {
+        width: 29vw;
     }
 
     .textBox {

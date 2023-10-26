@@ -94,8 +94,6 @@ function GalleryPage() {
               <div style={{ padding: '30px' }} />
               <div className='contentContainer-3'>
                 {Object.entries(concerts).map(galleryPreview)}
-                <ImageCard text='40 Jahre Westpark' backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' />
-                <ImageCard text='Musikalisches Weinfest 2023' backgroundColor={isDesktop ? 'black' : 'darkred'} fontSize='medium' />
               </div>
             </div>
             <div className='sectionImgContainer'>

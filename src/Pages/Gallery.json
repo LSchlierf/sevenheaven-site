@@ -24,6 +24,45 @@
             "/img/23-09-2023/IMG_8329.JPG"
         ]
     },
+    "westparkjubulaeum": {
+        "title": "Westparkjubiläum",
+        "preview": "40. Westparkjubiläum 2023",
+        "images": [
+            "/img/westparkjubilaeum/20230722_215033.jpg",
+            "/img/westparkjubilaeum/20230722_220342.jpg",
+            "/img/westparkjubilaeum/AllesNeu.PNG",
+            "/img/westparkjubilaeum/Band2.PNG",
+            "/img/westparkjubilaeum/Band3.PNG",
+            "/img/westparkjubilaeum/Band.PNG",
+            "/img/westparkjubilaeum/IMG_0909.jpeg",
+            "/img/westparkjubilaeum/Julian.PNG",
+            "/img/westparkjubilaeum/LucasLuisa2.PNG",
+            "/img/westparkjubilaeum/LucasLuisa.PNG",
+            "/img/westparkjubilaeum/Lucas.PNG",
+            "/img/westparkjubilaeum/Shallow.PNG"
+        ]
+    },
+    "weinfest": {
+        "title": "Musikalisches Weinfest",
+        "preview": "Musikalisches Weinfest 2023",
+        "images": [
+            "/img/weinfest/band.PNG",
+            "/img/weinfest/basketCase.PNG",
+            "/img/weinfest/daniel2.PNG",
+            "/img/weinfest/daniel.PNG",
+            "/img/weinfest/flo2.PNG",
+            "/img/weinfest/flo3.PNG",
+            "/img/weinfest/flo_lucas.PNG",
+            "/img/weinfest/flo.PNG",
+            "/img/weinfest/itsMyLife.PNG",
+            "/img/weinfest/jakob2.PNG",
+            "/img/weinfest/jakob.PNG",
+            "/img/weinfest/julian.PNG",
+            "/img/weinfest/luisa2.PNG",
+            "/img/weinfest/luisa.PNG",
+            "/img/weinfest/rock.PNG"
+        ]
+    },
     "juha": {
         "title": "JuHa Neuried",
         "preview": "JuHa Neuried 2023",

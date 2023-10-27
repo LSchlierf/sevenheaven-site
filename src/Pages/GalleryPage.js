@@ -18,7 +18,7 @@ function ConcertGallery() {
   function makeLargeImg(img) {
     setLargeImg(
       <div className='largeImg' onClick={() => setLargeImg(<></>)}>
-        <img src={img} alt='' />
+        <img srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + img + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + img} alt='' />
       </div>
     )
   }
@@ -32,7 +32,7 @@ function ConcertGallery() {
   function galleryCard(img, index) {
     return (
       <div className='galleryWrapper' key={index}>
-        <img src={img} alt='' onClick={isDesktop ? () => makeLargeImg(img) : () => { }} />
+        <img sizes='(min-width: 768px) 25vw, 90vw' srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + img + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + img} alt='' onClick={isDesktop ? () => makeLargeImg(img) : () => { }} />
       </div>
     )
   }
@@ -48,7 +48,7 @@ function ConcertGallery() {
       <TitleBar />
       <BurgerMenu />
       <div className='bgImgContainer'>
-        <img src={constants.staticBg} alt='background' />
+        <img srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + constants.staticBg + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
         {largeImg}
@@ -73,7 +73,7 @@ function GalleryPage() {
         <div className='imageCardWrapper' style={{ paddingBottom: '55%', cursor: 'pointer' }} >
           <div className='imageCard'>
             <div className='imageWrapper'>
-              <img src={concert[1].thumbnail} alt='card' />
+              <img sizes='(min-width: 768px) 25vw, 90vw' srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + concert[1].thumbnail + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + concert[1].thumbnail} alt='card' />
             </div>
             <div className='galleryOverlay' >
               <img src='/img/photo-gallery-icon.svg' />
@@ -103,7 +103,7 @@ function GalleryPage() {
       <TitleBar />
       <BurgerMenu />
       <div className='bgImgContainer'>
-        <img src={constants.staticBg} alt='background' />
+        <img srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + constants.staticBg + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
         <div className='pageContentContainer'>

@@ -1,16 +1,22 @@
 {
-    "staticBg" : "/bg/bg.jpg",
-    "staticBgBW" : "/bg/bw.jpg",
-    "cyclerM" : [
-        "/bg/L1000716.JPG",
-        "/bg/_DSB5574.jpeg",
-        "/bg/L1000640.JPG"
+    "staticBg": "/bg/bg.jpg",
+    "staticBgBW": "/bg/bw.jpg",
+    "cyclerM": [
+        "bg/L1000716.JPG",
+        "bg/_DSB5574.jpeg",
+        "bg/L1000640.JPG"
     ],
-    "cyclerD" : [
-        "/bg/L1000537.JPG",
-        "/bg/_DSB5574.jpeg",
-        "/bg/_DSB5108.jpeg",
-        "/bg/20230325_230615.jpg",
-        "/bg/L1000678.JPG"
+    "cyclerD": [
+        "bg/L1000537.JPG",
+        "bg/_DSB5574.jpeg",
+        "bg/_DSB5108.jpeg",
+        "bg/20230325_230615.jpg",
+        "bg/L1000678.JPG"
+    ],
+    "imgSizes": [
+        1920,
+        1280,
+        980,
+        420
     ]
 }

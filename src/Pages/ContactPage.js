@@ -174,7 +174,7 @@ function ContactPage() {
     <>
       <TitleBar />
       <div className='bgImgContainer'>
-        <img src={constants.staticBg} alt='background' />
+        <img srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + constants.staticBg + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + constants.staticBg} alt='background' />
       </div>
       <div className='subPageContent'>
         <div className='pageContentContainer'>

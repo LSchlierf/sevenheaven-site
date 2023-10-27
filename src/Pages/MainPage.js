@@ -14,7 +14,7 @@ import constants from './Constants.json'
 import BurgerMenu from '../Components/BurgerMenu';
 
 function getImages(input, className) {
-  return input.map((src, index) => <img className={className} id={'bg' + index} src={src} alt='background' key={index} />)
+  return input.map((src, index) => <img className={className} id={'bg' + index} srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + src + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + src} alt='background' key={index} />)
 }
 
 function MainPage() {
@@ -108,7 +108,7 @@ function MainPage() {
       <TitleBar />
       <BurgerMenu />
       <div className='cyclerBgImgContainer'>
-        <img className='cyclerBgImg' src={constants.staticBg} alt='background' />
+        <img className='cyclerBgImg' srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + constants.staticBg + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + constants.staticBg} alt='background' />
       </div>
       <div className='imgCyclerM'>
         {img}
@@ -153,9 +153,9 @@ function MainPage() {
           <div className='sectionContent'>
             <Header text='Angebot' id='angebot' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
             <div className='contentContainer-3'>
-              <ImageCard img='img/itsMyLife.PNG' text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
-              <ImageCard img='img/stimmung.JPG' text='Zu einer guten Hochzeit gehören Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
-              <ImageCard img='img/liveBand.JPG' text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard img='itsMyLife.PNG' text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard img='stimmung.JPG' text='Zu einer guten Hochzeit gehören Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard img='liveBand.JPG' text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
               <div className='textBoxWrapper'>
                 <div className='textBox' style={{ background: isDesktop ? 'rgba(0,0,0,0.5)' : 'darkred', fontSize: 'large' }} >
                   Interesse? Kontaktiere uns gerne {stickyLink('hier', '/kontakt', 'angebot')}.
@@ -171,7 +171,7 @@ function MainPage() {
         </div>
         <Header text='Über uns' id='wir' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='contentContainer'>
-          <ImageCard img='img/friends.JPG' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px' />
+          <ImageCard img='friends.JPG' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px' />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} >

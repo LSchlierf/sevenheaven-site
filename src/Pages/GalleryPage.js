@@ -3,17 +3,23 @@ import { isBrowser, isTablet } from 'react-device-detect'
 import './GalleryPage.css'
 import TitleBar from '../Components/TitleBar';
 import Header from '../Components/Header';
-import { ImageCard } from '../Components/ImageCard';
 import PageFooter from '../Components/PageFooter';
 import BackToMainPage from '../Components/BackToMainPage';
 import constants from './Constants.json'
 import concerts from './Gallery.json'
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, Link } from 'react-router-dom';
 import BurgerMenu from '../Components/BurgerMenu';
+import { BsArrowLeft } from "react-icons/bs";
+import { IconContext } from 'react-icons';
 const isDesktop = isBrowser || isTablet
 
 function ConcertGallery() {
   let [largeImg, setLargeImg] = useState(<></>)
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [])
 
   function makeLargeImg(img) {
     setLargeImg(
@@ -57,7 +63,21 @@ function ConcertGallery() {
           <div className='contentContainer'>
             {concert.images.map(galleryCard)}
           </div>
-          <BackToMainPage to='/galerie' text='Zurück zur Galerie' />
+          <Link className='backWrapper' style={{ backgroundColor: 'rgba(0,0,0,0.5)', fontSize: isDesktop ? '30px' : '5vw', textDecoration: 'none' }} to={'/galerie'} state={{ location: location.state?.location }}>
+            <div className='backIcon'>
+              <IconContext.Provider value={{ color: 'white', size: (isDesktop ? 50 : 30) }}>
+                <BsArrowLeft />
+              </IconContext.Provider>
+            </div>
+            <div className='backText'>
+              Zurück zur Galerie
+            </div>
+            {
+              isDesktop ? (
+                <div style={{ width: '50px' }} />
+              ) : (<></>)
+            }
+          </Link>
           <div style={{ paddingBottom: '30px' }} />
         </div>
         <PageFooter />
@@ -69,14 +89,14 @@ function ConcertGallery() {
 function GalleryPage() {
   function galleryPreview(concert, index) {
     return (
-      <div className='imageCardWrapperWrapper' onClick={() => navigate('/galerie/' + concert[0])} key={index}>
+      <div className='imageCardWrapperWrapper' onClick={() => navigate('/galerie/' + concert[0], { state: { location: location.state?.location } })} key={index}>
         <div className='imageCardWrapper' style={{ paddingBottom: '55%', cursor: 'pointer' }} >
           <div className='imageCard'>
             <div className='imageWrapper'>
               <img sizes='(min-width: 768px) 25vw, 90vw' srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + concert[1].thumbnail + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + concert[1].thumbnail} alt='card' />
             </div>
             <div className='galleryOverlay' >
-              <img src='/img/photo-gallery-icon.svg' />
+              <img src='/img/photo-gallery-icon.svg' alt='' />
             </div>
           </div>
         </div>
@@ -89,15 +109,14 @@ function GalleryPage() {
     )
   }
 
+
   const location = useLocation()
   const navigate = useNavigate()
+
   useEffect(() => {
-    if (location.state?.location) {
-      window.scrollTo({ top: 0, behavior: 'instant' })
-      navigate(location.pathname, { replace: true, state: { retLocation: location.state.location } })
-    }
-    // eslint-disable-next-line
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }, [])
+
   return (
     <>
       <TitleBar />
@@ -108,20 +127,10 @@ function GalleryPage() {
       <div className='subPageContent'>
         <div className='pageContentContainer'>
           <Header text='Galerie' fontSize={isDesktop ? '350%' : '200%'} paddingBottom='0' />
-          <div className='sectionWrapper'>
-            <div className='sectionContent'>
-              {/* <div style={{ padding: '30px' }} /> */}
-              <div className='contentContainer-3'>
-                {Object.entries(concerts).map(galleryPreview)}
-              </div>
-            </div>
-            {/* <div className='sectionImgContainer'>
-              {
-                isDesktop ? <></> : <img src={constants.staticBgBW} alt='background' />
-              }
-            </div> */}
+          <div className='contentContainer-3'>
+            {Object.entries(concerts).map(galleryPreview)}
           </div>
-          <BackToMainPage retLocation={location.state?.retLocation} />
+          <BackToMainPage retLocation={location.state?.location} />
           <div style={{ paddingBottom: '30px' }} />
         </div>
         <PageFooter />

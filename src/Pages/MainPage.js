@@ -165,7 +165,7 @@ function MainPage() {
           </div>
           <div className='sectionImgContainer'>
             {
-              isDesktop ? <></> : <img src={constants.staticBgBW} alt='background' />
+              isDesktop ? <></> : <img srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + constants.staticBgBW + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + constants.staticBgBw} alt='background' />
             }
           </div>
         </div>

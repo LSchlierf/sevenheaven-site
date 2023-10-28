@@ -16,16 +16,9 @@ function ImprintPage() {
         <div className='legalTextWrapper'>
           <div className='legalText'>
             Verantwortlich für den Inhalt dieser Seite:
-            <br />
-            Sevenheaven GbR
-            <br />
-            Lucas Schlierf
-            <br />
-            Klingerstraße 31
-            <br />
-            81369 München
-            <br />
-            <br />
+            <br /><br />
+            Sevenheaven GbR<br />Lucas Schlierf<br />Klingerstraße 31<br />81369 München
+            <br /><br />
             Bei Fragen oder Hinweisen zum Inhalt wenden Sie sich bitte an <a href='mailto:kontakt@sevenheaven.band'>
               kontakt@sevenheaven.band
             </a>.

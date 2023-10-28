@@ -1,6 +1,6 @@
 {
   "name": "sevenheaven",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -17,7 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "~7.21.11"
   },
   "scripts": {
     "start": "react-scripts start",

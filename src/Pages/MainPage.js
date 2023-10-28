@@ -95,6 +95,10 @@ function MainPage() {
     // eslint-disable-next-line
   }, [])
 
+  function stickyClick(href, id) {
+    return () => navigate(href, { state: { location: id } })
+  }
+
   function stickyLink(text, href, id) {
     return (
       <Link to={href} state={{ location: id }}>
@@ -137,7 +141,7 @@ function MainPage() {
           <VideoCard vid='https://www.youtube.com/embed/urSar1gnXOQ?si=DQh8lAVymiEx-CFJ' text={<>Konzert Jugendhaus Neuried 2023<br />(Hightlights)</>} thumbnail='thumbnails/juha.jpg' domain='YouTube' />
         </div>
         <div className='textBoxWrapper'>
-          <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} >
+          <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} onClick={stickyClick('/galerie', 'musik')}>
             Willst du noch mehr von uns sehen? {stickyLink('Hier', '/galerie', 'musik')} sind weitere Fotos.
           </div>
         </div>
@@ -145,7 +149,7 @@ function MainPage() {
           <ImageCard text='Wir erweitern unser Repertoire regelmäßig. Vielleicht sind ja auch ein paar Deiner Lieblingssongs dabei?' fontSize='medium' />
         </div>
         <div className='textBoxWrapper'>
-          <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} >
+          <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} onClick={stickyClick('/repertoire', 'musik')}>
             Eine Übersicht über unser Repertoire findest du {stickyLink('hier', '/repertoire', 'musik')}.
           </div>
         </div>
@@ -157,7 +161,7 @@ function MainPage() {
               <ImageCard img='stimmung.JPG' text='Zu einer guten Hochzeit gehören Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
               <ImageCard img='liveBand.JPG' text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
               <div className='textBoxWrapper'>
-                <div className='textBox' style={{ background: isDesktop ? 'rgba(0,0,0,0.5)' : 'darkred', fontSize: 'large' }} >
+                <div className='textBox' style={{ background: isDesktop ? 'rgba(0,0,0,0.5)' : 'darkred', fontSize: 'large' }} onClick={stickyClick('/kontakt', 'angebot')}>
                   Interesse? Kontaktiere uns gerne {stickyLink('hier', '/kontakt', 'angebot')}.
                 </div>
               </div>
@@ -174,13 +178,13 @@ function MainPage() {
           <ImageCard img='friends.JPG' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px' />
         </div>
         <div className='textBoxWrapper'>
-          <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} >
+          <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} onClick={stickyClick('/wir', 'wir')}>
             {stickyLink('Hier', '/wir', 'wir')} erfährst du mehr über unsere einzelnen Bandmitglieder.
           </div>
         </div>
         <Header text='Kontakt' id='kontakt' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='textBoxWrapper'>
-          <div className='textBox' style={{ background: 'darkred', fontSize: 'large' }} >
+          <div className='textBox' style={{ background: 'darkred', fontSize: 'large' }} onClick={stickyClick('/kontakt', 'kontakt')}>
             {stickyLink('Schreibe uns eine Nachricht!', '/kontakt', 'kontakt')}
           </div>
         </div>

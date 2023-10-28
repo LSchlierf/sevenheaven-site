@@ -61,5 +61,5 @@ TODO:
 - hintergrund bild scrollt hoch rot      [x]
 - hintergrund bild scrollt hoch schwarz  [x]
 - galerieseite pro Konzert bildgröße fix [x]
-- ganze Textbox klickbar bei sticky link [ ]
+- ganze Textbox klickbar bei sticky link [x]
 */

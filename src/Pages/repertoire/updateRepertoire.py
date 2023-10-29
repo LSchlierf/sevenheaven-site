@@ -1,7 +1,11 @@
+#!/home/lucas/venv/bin/python
 import json
 import string
+import os
 
-with open("Repertoire.txt", "r") as f:
+filedir = os.path.dirname(__file__)
+
+with open(filedir + os.sep + "Repertoire.txt", "r") as f:
     repertoire = f.readlines()
     # unify with trailing newlines
     repertoire = list(map(lambda l : l.strip() + '\n', repertoire))
@@ -12,7 +16,7 @@ with open("Repertoire.txt", "r") as f:
     # remove duplicates
     repertoire = list(dict.fromkeys(repertoire))
 #write back sorted list
-with open("Repertoire.txt", "w") as f:
+with open(filedir + os.sep + "Repertoire.txt", "w") as f:
     f.writelines(repertoire)
 #initialize the dict for letter mapping
 letters = {}
@@ -29,5 +33,5 @@ for song in repertoire:
     else:
         letters["#"].append({"title": title, "artist": artist})
 
-with open("Repertoire.json", "w") as r:
+with open(filedir + os.sep + "Repertoire.json", "w") as r:
     json.dump([{"letter": letter, "songs": letters[letter]} for letter in letters], r, indent=4)

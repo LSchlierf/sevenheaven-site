@@ -143,6 +143,10 @@
         "letter": "I",
         "songs": [
             {
+                "title": "I will survive",
+                "artist": "Gloria Gaynor"
+            },
+            {
                 "title": "Irgendwie irgendwo irgendwann",
                 "artist": "Nena"
             },
@@ -256,6 +260,14 @@
                 "artist": "Die \u00c4rzte"
             },
             {
+                "title": "Se bastasse una canzone",
+                "artist": "Eros Ramazzotti"
+            },
+            {
+                "title": "Seven nation army (Walzer)",
+                "artist": "The White Stripes"
+            },
+            {
                 "title": "Seven nation army",
                 "artist": "The White Stripes"
             },
@@ -266,6 +278,10 @@
             {
                 "title": "Shallow",
                 "artist": "Lady Gaga"
+            },
+            {
+                "title": "Shut up and dance",
+                "artist": "Walk the Moon"
             },
             {
                 "title": "Skyfall",

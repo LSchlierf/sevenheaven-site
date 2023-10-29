@@ -38,13 +38,13 @@ function ConcertGallery() {
   function galleryCard(img, index) {
     return (
       <div className='galleryWrapper' key={index}>
-        <img sizes='(min-width: 768px) 25vw, 90vw' srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + img + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + img} alt='' onClick={isDesktop ? () => makeLargeImg(img) : () => { }} />
+        <img sizes='(min-width: 768px) 400px, 90vw' srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + img + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + img} alt='' onClick={isDesktop ? () => makeLargeImg(img) : () => { }} />
       </div>
     )
   }
 
   let params = useParams()
-  if (!params.concert || !concerts[params.concert]) {
+  if (!params?.concert || !concerts[params.concert]) {
     return
   }
   const concert = concerts[params.concert]
@@ -60,7 +60,7 @@ function ConcertGallery() {
         {largeImg}
         <div className='pageContentContainer'>
           <Header text={concert.title} fontSize={isDesktop ? '200%' : '100%'} paddingBottom='0' />
-          <div className='contentContainer'>
+          <div className='galleryContent'>
             {concert.images.map(galleryCard)}
           </div>
           <Link className='backWrapper' style={{ backgroundColor: 'rgba(0,0,0,0.5)', fontSize: isDesktop ? '30px' : '5vw', textDecoration: 'none' }} to={'/galerie'} state={{ location: location.state?.location }}>

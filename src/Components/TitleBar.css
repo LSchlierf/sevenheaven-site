@@ -103,3 +103,14 @@
     position: relative;
     top: 2.2vw
 }
+
+@media only screen and (min-width: 768px) {
+
+    .navLogo > .bandLogo:hover,
+    .navLogo > a > .bandLogo:hover,
+    .centerLogoText > a > .bandLogo:hover {
+        transform: scale(1.1);
+        transition: all 0.1s;
+    }
+
+}

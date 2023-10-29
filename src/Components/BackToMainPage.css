@@ -18,6 +18,11 @@
         right: 30%;
         justify-content: space-around;
     }
+
+    .backWrapper:hover {
+        transform: scale(1.05);
+        transition: all 0.1s;
+    }
 }
 
 .backIcon {

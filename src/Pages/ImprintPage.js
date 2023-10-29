@@ -21,7 +21,7 @@ function ImprintPage() {
             <br /><br />
             Bei Fragen oder Hinweisen zum Inhalt wenden Sie sich bitte an <a href='mailto:kontakt@sevenheaven.band'>
               kontakt@sevenheaven.band
-            </a>.
+            </a> oder melden Sie sich unter der Telefonnummer 089/71034962.
           </div>
         </div>
         <BackToMainPage />

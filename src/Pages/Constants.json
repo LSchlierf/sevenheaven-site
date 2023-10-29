@@ -1,6 +1,6 @@
 {
-    "staticBg": "/bg/bg.jpg",
-    "staticBgBW": "/bg/bw.jpg",
+    "staticBg": "bg/bg.jpg",
+    "staticBgBW": "bg/bw.jpg",
     "cyclerM": [
         "bg/L1000716.JPG",
         "bg/_DSB5574.jpeg",

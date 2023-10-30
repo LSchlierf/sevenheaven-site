@@ -105,12 +105,16 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .navLogo > .bandLogo,
+    .navLogo > a > .bandLogo,
+    .centerLogoText > a > .bandLogo {
+        transition: all 0.1s;
+    }
 
     .navLogo > .bandLogo:hover,
     .navLogo > a > .bandLogo:hover,
     .centerLogoText > a > .bandLogo:hover {
         transform: scale(1.1);
-        transition: all 0.1s;
     }
 
 }

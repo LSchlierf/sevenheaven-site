@@ -92,11 +92,11 @@
         left: 30vw;
         right: 30vw;
         cursor: pointer;
+        transition: all 0.1s;
     }
 
     .moreRepertoire:hover {
         transform: scale(1.05);
-        transition: all 0.1s;
     }
 
     .moreRepertoireText {

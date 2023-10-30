@@ -118,19 +118,23 @@
         cursor: pointer;
     }
 
+    .textBox,
+    .goLeft,
+    .goRight,
+    .contact {
+        transition: all 0.1s;
+    }
+
     .textBox:hover {
         transform: scale(1.04);
-        transition: all 0.1s;
     }
 
     .goLeft:hover, .goRight:hover {
         transform: scale(1.2);
-        transition: all 0.1s;
     }
 
     .contact:hover {
         transform: scale(1.1);
-        transition: all 0.1s;
     }
 }
 

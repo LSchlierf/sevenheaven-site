@@ -150,8 +150,11 @@ textarea {
         box-sizing: content-box;
     }
 
+    #contactSubmit {
+        transition: all 0.1s;
+    }
+
     #contactSubmit:hover {
         transform: scale(1.1);
-        transition: all 0.1s;
     }
 }

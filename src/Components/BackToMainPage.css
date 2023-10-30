@@ -17,11 +17,11 @@
         left: 30%;
         right: 30%;
         justify-content: space-around;
+        transition: all 0.1s;
     }
 
     .backWrapper:hover {
         transform: scale(1.05);
-        transition: all 0.1s;
     }
 }
 

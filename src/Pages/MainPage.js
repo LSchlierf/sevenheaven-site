@@ -138,7 +138,7 @@ function MainPage() {
         <Header text='musik' id='musik' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='contentContainer'>
           <VideoCard vid='https://www.youtube.com/embed/j6pDTYMMN7o?si=mEWEJK5ZGlRIHqyF' text={<>40-jähriges Westpark Jubiläum 2023<br />(Highlights)</>} thumbnail='thumbnails/westpark.jpg' domain='YouTube' />
-          <VideoCard vid='https://www.youtube.com/embed/urSar1gnXOQ?si=DQh8lAVymiEx-CFJ' text={<>Konzert Jugendhaus Neuried 2023<br />(Hightlights)</>} thumbnail='thumbnails/juha.jpg' domain='YouTube' />
+          <VideoCard vid='https://www.youtube.com/embed/urSar1gnXOQ?si=DQh8lAVymiEx-CFJ' text={<>Konzert Jugendhaus Neuried 2023<br />(Highlights)</>} thumbnail='thumbnails/juha.jpg' domain='YouTube' />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} onClick={stickyClick('/galerie', 'musik')}>

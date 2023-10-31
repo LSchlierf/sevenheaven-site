@@ -146,7 +146,7 @@ function MainPage() {
           </div>
         </div>
         <div className='contentContainer'>
-          <ImageCard text='Wir erweitern unser Repertoire regelmäßig. Vielleicht sind ja auch ein paar Deiner Lieblingssongs dabei?' fontSize='medium' />
+          <ImageCard img='repertoire.jpeg' text='Wir erweitern unser Repertoire regelmäßig. Vielleicht sind ja auch ein paar Deiner Lieblingssongs dabei?' fontSize='medium' />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} onClick={stickyClick('/repertoire', 'musik')}>

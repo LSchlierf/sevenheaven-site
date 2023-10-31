@@ -1,4 +1,3 @@
-#!/usr/bin/python
 #!/home/lucas/venv/bin/python
 import os
 from PIL import Image

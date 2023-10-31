@@ -97,7 +97,7 @@ function RepertoirePage() {
             <IconContext.Provider value={{ color: 'white', size: 40 }}>
               <BsChevronDown />
               <div className='moreRepertoireText'>
-                Hier findest Du unsere gesame Songliste
+                Hier findest Du unsere gesamte Songliste
               </div>
               <BsChevronDown />
             </IconContext.Provider>

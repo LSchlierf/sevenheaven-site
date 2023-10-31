@@ -2,16 +2,16 @@
     "staticBg": "bg/bg.jpg",
     "staticBgBW": "bg/bw.jpg",
     "cyclerM": [
-        "bg/L1000716.JPG",
-        "bg/_DSB5574.jpeg",
-        "bg/L1000640.JPG"
+        "bg/L1000716.jpg",
+        "bg/_DSB5574.jpg",
+        "bg/L1000640.jpg"
     ],
     "cyclerD": [
-        "bg/L1000537.JPG",
-        "bg/_DSB5108.jpeg",
-        "bg/_DSB5574.jpeg",
+        "bg/L1000537.jpg",
+        "bg/_DSB5108.jpg",
+        "bg/_DSB5574.jpg",
         "bg/20230325_230615.jpg",
-        "bg/L1000678.JPG"
+        "bg/L1000678.jpg"
     ],
     "imgSizes": [
         1920,

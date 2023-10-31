@@ -54,7 +54,7 @@ function ConcertGallery() {
       <TitleBar />
       <BurgerMenu />
       <div className='bgImgContainer'>
-        <img srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + constants.staticBg + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + constants.staticBg} alt='background' />
+        <img srcSet={constants.imgSizes.map(size => '/img/' + size.toString() + '/' + constants.staticBgBW + ' ' + size.toString() + 'w').join(', ')} src={'/img/original/' + constants.staticBgBW} alt='background' />
       </div>
       <div className='subPageContent'>
         {largeImg}

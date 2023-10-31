@@ -146,7 +146,7 @@ function MainPage() {
           </div>
         </div>
         <div className='contentContainer'>
-          <ImageCard img='repertoire.jpeg' text='Wir erweitern unser Repertoire regelmäßig. Vielleicht sind ja auch ein paar Deiner Lieblingssongs dabei?' fontSize='medium' />
+          <ImageCard img='repertoire.jpg' text='Wir erweitern unser Repertoire regelmäßig. Vielleicht sind ja auch ein paar Deiner Lieblingssongs dabei?' fontSize='medium' />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'large' }} onClick={stickyClick('/repertoire', 'musik')}>
@@ -157,9 +157,9 @@ function MainPage() {
           <div className='sectionContent'>
             <Header text='Angebot' id='angebot' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
             <div className='contentContainer-3'>
-              <ImageCard img='itsMyLife.PNG' text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
-              <ImageCard img='stimmung.JPG' text='Zu einer guten Hochzeit gehören Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
-              <ImageCard img='liveBand.JPG' text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard img='itsMyLife.jpg' text='Auf deinem Dorffest/Weinfest oder in deinem Bierzelt sorgen wir für die richtige Stimmung' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard img='stimmung.jpg' text='Zu einer guten Hochzeit gehören Tanz, Stimmung und ein Hauch Romantik. Wir liefern die perfekte Kombi.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
+              <ImageCard img='liveBand.jpg' text='Musik vom Handy ist Dir für Deine Feier nicht mehr genug? Greife doch auf eine Live-Band zurück.' fontSize='medium' backgroundColor={isDesktop ? 'black' : 'darkred'} />
               <div className='textBoxWrapper'>
                 <div className='textBox' style={{ background: isDesktop ? 'rgba(0,0,0,0.5)' : 'darkred', fontSize: 'large' }} onClick={stickyClick('/kontakt', 'angebot')}>
                   Interesse? Kontaktiere uns gerne {stickyLink('hier', '/kontakt', 'angebot')}.
@@ -175,7 +175,7 @@ function MainPage() {
         </div>
         <Header text='Über uns' id='wir' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='contentContainer'>
-          <ImageCard img='friends.JPG' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px' />
+          <ImageCard img='friends.jpg' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px' />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} onClick={stickyClick('/wir', 'wir')}>

@@ -63,7 +63,7 @@ function ConcertGallery() {
           <div className='galleryContent'>
             {concert.images.map(galleryCard)}
           </div>
-          <Link className='backWrapper' style={{ backgroundColor: 'rgba(0,0,0,0.5)', fontSize: isDesktop ? '30px' : '5vw', textDecoration: 'none' }} to={'/galerie'} state={{ location: location.state?.location }}>
+          <Link className='backWrapper' style={{ backgroundColor: 'darkred', fontSize: isDesktop ? '30px' : '5vw', textDecoration: 'none' }} to={'/galerie'} state={{ location: location.state?.location }}>
             <div className='backIcon'>
               <IconContext.Provider value={{ color: 'white', size: (isDesktop ? 50 : 30) }}>
                 <BsArrowLeft />

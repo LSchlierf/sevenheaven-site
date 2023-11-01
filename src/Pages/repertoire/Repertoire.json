@@ -16,15 +16,15 @@
         "letter": "B",
         "songs": [
             {
-                "title": "Basket case",
+                "title": "Basket Case",
                 "artist": "Green Day"
             },
             {
-                "title": "Boulevard of broken dreams",
+                "title": "Boulevard of Broken Dreams",
                 "artist": "Green Day"
             },
             {
-                "title": "Brenna tuats guad",
+                "title": "Brenna tuats guat",
                 "artist": "Hubert von Goisern"
             },
             {
@@ -37,11 +37,11 @@
         "letter": "C",
         "songs": [
             {
-                "title": "Can't fight this feeling",
+                "title": "Can't Fight This Feeling",
                 "artist": "REO Speedwagon"
             },
             {
-                "title": "Can't stop",
+                "title": "Can't Stop",
                 "artist": "Red Hot Chili Peppers"
             },
             {
@@ -62,11 +62,11 @@
                 "artist": "Sevenheaven"
             },
             {
-                "title": "Don't stop believing",
+                "title": "Don't Stop Believin'",
                 "artist": "Journey"
             },
             {
-                "title": "Don't stop me now",
+                "title": "Don't Stop Me Now",
                 "artist": "Queen"
             }
         ]
@@ -93,7 +93,7 @@
         "letter": "G",
         "songs": [
             {
-                "title": "Gimme gimme gimme",
+                "title": "Gimme! Gimme! Gimme!",
                 "artist": "ABBA"
             },
             {
@@ -118,7 +118,7 @@
                 "artist": "The Beatles"
             },
             {
-                "title": "Hold the line",
+                "title": "Hold the Line",
                 "artist": "Toto"
             },
             {
@@ -131,7 +131,7 @@
             },
             {
                 "title": "Hotel California",
-                "artist": "The Eagles"
+                "artist": "Eagles"
             },
             {
                 "title": "Hurra, hurra, die Schule brennt",
@@ -143,15 +143,15 @@
         "letter": "I",
         "songs": [
             {
-                "title": "I will survive",
+                "title": "I Will Survive",
                 "artist": "Gloria Gaynor"
             },
             {
-                "title": "Irgendwie irgendwo irgendwann",
+                "title": "Irgendwie, irgendwo, irgendwann",
                 "artist": "Nena"
             },
             {
-                "title": "It's my life",
+                "title": "It's My Life",
                 "artist": "Bon Jovi"
             }
         ]
@@ -160,7 +160,7 @@
         "letter": "J",
         "songs": [
             {
-                "title": "Jetlag",
+                "title": "Jet Lag",
                 "artist": "Simple Plan"
             },
             {
@@ -177,7 +177,7 @@
         "letter": "L",
         "songs": [
             {
-                "title": "Little talks",
+                "title": "Little Talks",
                 "artist": "Of Monsters and Men"
             }
         ]
@@ -190,7 +190,7 @@
                 "artist": "Peter Schilling"
             },
             {
-                "title": "More than you know",
+                "title": "More Than You Know",
                 "artist": "Axwell /\\ Ingrosso"
             }
         ]
@@ -209,7 +209,7 @@
         "songs": [
             {
                 "title": "Ohne dich",
-                "artist": "M\u00fcnchner Freiheit"
+                "artist": "M\u00fcnchener Freiheit"
             }
         ]
     },
@@ -226,7 +226,7 @@
         "letter": "Q",
         "songs": [
             {
-                "title": "Que sera sera",
+                "title": "Que Sera Sera",
                 "artist": "Doris Day"
             }
         ]
@@ -235,11 +235,11 @@
         "letter": "R",
         "songs": [
             {
-                "title": "Rockin' all over the world",
+                "title": "Rockin' All Over The World",
                 "artist": "Status Quo"
             },
             {
-                "title": "Rolling in the deep",
+                "title": "Rolling in the Deep",
                 "artist": "Adele"
             },
             {
@@ -264,24 +264,24 @@
                 "artist": "Eros Ramazzotti"
             },
             {
-                "title": "Seven nation army (Walzer)",
+                "title": "Seven Nation Army (Walzer)",
                 "artist": "The White Stripes"
             },
             {
-                "title": "Seven nation army",
+                "title": "Seven Nation Army",
                 "artist": "The White Stripes"
             },
             {
-                "title": "Sex on fire",
+                "title": "Sex on Fire",
                 "artist": "Kings of Leon"
             },
             {
                 "title": "Shallow",
-                "artist": "Lady Gaga"
+                "artist": "Lady Gaga, Bradley Cooper"
             },
             {
-                "title": "Shut up and dance",
-                "artist": "Walk the Moon"
+                "title": "Shut Up and Dance",
+                "artist": "WALK THE MOON"
             },
             {
                 "title": "Skyfall",
@@ -296,7 +296,7 @@
                 "artist": "DJ \u00d6tzi"
             },
             {
-                "title": "Sweet home Chicago",
+                "title": "Sweet Home Chicago",
                 "artist": "The Blues Brothers"
             }
         ]
@@ -309,15 +309,15 @@
                 "artist": "Die Toten Hosen"
             },
             {
-                "title": "This is the life",
+                "title": "This Is The Life",
                 "artist": "Amy Macdonald"
             },
             {
-                "title": "This love",
+                "title": "This Love",
                 "artist": "Maroon 5"
             },
             {
-                "title": "Time warp",
+                "title": "Time Warp",
                 "artist": "Rocky Horror Picture Show"
             }
         ]
@@ -338,15 +338,15 @@
                 "artist": "ABBA"
             },
             {
-                "title": "Weusd' a Herz hast",
+                "title": "Weus'd a Herz hast wia a Bergwerk",
                 "artist": "Rainhard Fendrich"
             },
             {
-                "title": "What's up",
+                "title": "What's Up?",
                 "artist": "4 Non Blondes"
             },
             {
-                "title": "Whatever it takes",
+                "title": "Whatever It Takes",
                 "artist": "Imagine Dragons"
             },
             {

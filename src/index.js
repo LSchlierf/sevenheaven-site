@@ -49,17 +49,3 @@ Main content          0
 bg img cycler        -3
 bg img static        -5
 */
-
-
-/*
-TODO: 
-- burger menü fixed                      [x]
-- Abstände checken                       [x]
-- zurück mit location                    [x]
-- Icons                                  [x]
-- Page footer kleiner                    [x]
-- hintergrund bild scrollt hoch rot      [x]
-- hintergrund bild scrollt hoch schwarz  [x]
-- galerieseite pro Konzert bildgröße fix [x]
-- ganze Textbox klickbar bei sticky link [x]
-*/

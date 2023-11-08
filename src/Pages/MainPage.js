@@ -175,7 +175,7 @@ function MainPage() {
         </div>
         <Header text='Über uns' id='wir' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='contentContainer'>
-          <ImageCard img='friends.jpg' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px' />
+          <ImageCard img='friends.jpg' text='Auf der Bühne treten wir nicht nur als Band, sondern auch als Freundesgruppe auf. Seit 2019 sorgen wir als Coverband auf diese Weise in und um München für die beste Unterhaltung. Mit fünfstimmigen Gesangssätzen, rockigen Gitarrensounds und abwechslungsreichen Arrangements haben wir uns zum Ziel gesetzt, einzigartige Erlebnisse für das Publikum zu schaffen.' fontSize='medium' padding='10px 20px' />
         </div>
         <div className='textBoxWrapper'>
           <div className='textBox' style={{ background: 'rgba(0,0,0,0.5)', fontSize: 'medium' }} onClick={stickyClick('/wir', 'wir')}>

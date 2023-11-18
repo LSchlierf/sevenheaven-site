@@ -1,5 +1,6 @@
 #!/home/lucas/venv/bin/python
 import os
+import sys
 from PIL import Image
 
 SIZES = [1920, 1280, 980, 420]
@@ -28,9 +29,12 @@ for currdir, dirs, files in os.walk(rootdir + os.sep + 'original'):
                 if not os.path.exists(newpath):
                     os.mkdir(newpath)
                 newfile = (newpath + file).split('.')[0] + '.jpg'
-                with open(newfile, "wb") as f:
-                    newimg.save(f)
-                print(' done ', end='')
-            print('resized.')
+                if not os.path.exists(newfile) or "ALL" in sys.argv:
+                    with open(newfile, "wb") as f:
+                        newimg.save(f)
+                    print(' done ', end='')
+                else:
+                    print(' skipped ', end='') 
+            print(', fully resized.')
 
 print('All done.')

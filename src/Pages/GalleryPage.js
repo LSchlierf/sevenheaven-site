@@ -45,6 +45,7 @@ function ConcertGallery() {
 
   let params = useParams()
   if (!params?.concert || !concerts[params.concert]) {
+    window.location = '/galerie'
     return
   }
   const concert = concerts[params.concert]

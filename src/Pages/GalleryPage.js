@@ -11,6 +11,7 @@ import { useLocation, useNavigate, useParams, Link } from 'react-router-dom';
 import BurgerMenu from '../Components/BurgerMenu';
 import { BsArrowLeft } from "react-icons/bs";
 import { IconContext } from 'react-icons';
+import { VideoCard } from '../Components/ImageCard';
 const isDesktop = isBrowser || isTablet
 
 function ConcertGallery() {
@@ -129,7 +130,10 @@ function GalleryPage() {
         <div className='pageContentContainer'>
           <Header text='Galerie' fontSize={isDesktop ? '350%' : '200%'} paddingBottom='0' />
           <div className='contentContainer-3'>
+            <Header sub text='Fotos' fontSize={isDesktop ? '40px' : '150%'} paddingBottom={isDesktop ? "40px" : "30px"} />
             {Object.entries(concerts).map(galleryPreview)}
+            <Header sub text='Videos' fontSize={isDesktop ? '40px' : '150%'} paddingBottom={isDesktop ? "40px" : "30px"} />
+            <VideoCard vid='https://www.youtube.com/embed/qWwdPrLqDso?si=fCnIT9igCO999ylX' text={<>Inside Seven Heaven<br />(Part 1)</>} thumbnail='thumbnails/inside1.jpg' domain='YouTube' />
           </div>
           <BackToMainPage retLocation={location.state?.location} />
           <div style={{ paddingBottom: '30px' }} />

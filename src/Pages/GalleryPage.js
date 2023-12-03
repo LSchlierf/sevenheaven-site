@@ -134,6 +134,7 @@ function GalleryPage() {
             {Object.entries(concerts).map(galleryPreview)}
             <Header sub text='Videos' fontSize={isDesktop ? '40px' : '150%'} paddingBottom={isDesktop ? "40px" : "30px"} />
             <VideoCard vid='https://www.youtube.com/embed/qWwdPrLqDso?si=fCnIT9igCO999ylX' text={<>Inside Seven Heaven<br />(Part 1)</>} thumbnail='thumbnails/inside1.jpg' domain='YouTube' />
+            <VideoCard vid='https://www.youtube.com/embed/fqxEIZ4eg38?si=SgePP1OxdlPuEnjp' text={<>Inside Seven Heaven<br />(Part 2)</>} thumbnail='thumbnails/inside2.jpg' domain='YouTube' />
           </div>
           <BackToMainPage retLocation={location.state?.location} />
           <div style={{ paddingBottom: '30px' }} />

@@ -52,7 +52,7 @@ function BurgerMenu() {
         ?
         <div className='menu'>
           <div className='menuImgContainer'>
-            <img src='logo192.png' alt='Bandlogo' />
+            <img src='/logo192.png' alt='Bandlogo' />
           </div>
           <div className='menuItem'>
             <BandLogo text='Home' fontSize='6vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => {

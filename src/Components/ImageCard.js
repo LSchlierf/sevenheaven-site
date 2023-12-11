@@ -8,7 +8,7 @@ function ImageCard(props) {
   const text = props.text || 'placeholder text lorem ipsum dolor sit amet'
   const fontSize = props.fontSize || 'larger'
   const backgroundColor = props.backgroundColor || 'black'
-  const height = '55%'
+  const height = props.vertical ? '127%' : '55%'
   const textAlign = 'center'
   const padding = props.padding
   const styleElement = {

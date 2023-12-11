@@ -65,6 +65,9 @@ function BurgerMenu() {
             }} />
           </div>
           <div className='menuItem'>
+            <BandLogo text='Aktuelles' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollTo('aktuelles') }} />
+          </div>
+          <div className='menuItem'>
             <BandLogo text='Musik' fontSize='6vw' padding='0' backgroundColor='rgba(0,0,0,0)' cursor='pointer' onClick={() => { toggleBurger(); scrollTo('musik') }} />
             <a href='/galerie' style={{ textDecoration: 'none' }}>
               <BandLogo text='Galerie' fontSize='3vw' padding='10px' backgroundColor='rgba(0,0,0,0)' cursor='pointer' />

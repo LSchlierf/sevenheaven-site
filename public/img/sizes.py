@@ -7,6 +7,9 @@ SIZES = [1920, 1280, 980, 420]
 
 rootdir = os.path.dirname(__file__)
 
+if rootdir.endswith('.'):
+    rootdir = rootdir[:-2]
+
 for currdir, dirs, files in os.walk(rootdir + os.sep + 'original'):
     for file in files:
         with Image.open(currdir + os.sep + file) as img:

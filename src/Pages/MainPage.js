@@ -135,6 +135,10 @@ function MainPage() {
         </div>
       </div >
       <div className='scrollContent' >
+        <Header text='aktuelles' id='aktuelles' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
+        <div className='contentContainer-3'>
+          <ImageCard img='posters/juha.jpg' text='Im Januar ist es wieder so weit! Ihr könnt uns im Juha wieder live erleben. Wir freuen uns auf die Party!' vertical />
+        </div>
         <Header text='musik' id='musik' fontSize={isDesktop ? '60px' : '200%'} paddingBottom={isDesktop ? "40px" : "30px"} />
         <div className='contentContainer'>
           <VideoCard vid='https://www.youtube.com/embed/j6pDTYMMN7o?si=mEWEJK5ZGlRIHqyF' text={<>40-jähriges Westpark Jubiläum 2023<br />(Highlights)</>} thumbnail='thumbnails/westpark.jpg' domain='YouTube' />

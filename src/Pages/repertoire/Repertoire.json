@@ -219,6 +219,10 @@
             {
                 "title": "Papaoutai",
                 "artist": "Stromae"
+            },
+            {
+                "title": "Perfekte Welle",
+                "artist": "Juli"
             }
         ]
     },
@@ -284,6 +288,10 @@
                 "artist": "WALK THE MOON"
             },
             {
+                "title": "Skandal im Sperrbezirk",
+                "artist": "Spider Murphy Gang"
+            },
+            {
                 "title": "Skyfall",
                 "artist": "Adele"
             },
@@ -328,7 +336,12 @@
     },
     {
         "letter": "V",
-        "songs": []
+        "songs": [
+            {
+                "title": "Viva La Vida",
+                "artist": "Coldplay"
+            }
+        ]
     },
     {
         "letter": "W",

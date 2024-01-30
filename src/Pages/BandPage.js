@@ -34,10 +34,10 @@ function BandPage() {
           <Header text='Die Band' fontSize={isDesktop ? '300%' : '200%'} paddingBottom='0' />
           <div className='portraits'>
             <div className='portraitWrapper'>
-              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Lucas Schlierf<div className='subText'>Leadgesang</div></>} img='band/Lucas.jpg' />
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Luisa Loher<div className='subText'>Leadgesang</div></>} img='band/Luisa.jpg' />
             </div>
             <div className='portraitWrapper'>
-              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Luisa Loher<div className='subText'>Leadgesang</div></>} img='band/Luisa.jpg' />
+              <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Lucas Schlierf<div className='subText'>Leadgesang</div></>} img='band/Lucas.jpg' />
             </div>
             <div className='portraitWrapper'>
               <PortraitCard version='portrait' fontSize='smaller' noCenter backgroundColor={bgColor} text={<>Florian Döhr<div className='subText'>Leadgitarre</div></>} img='band/Florian.jpg' />
